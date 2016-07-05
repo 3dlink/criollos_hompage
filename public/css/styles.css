@@ -1,0 +1,266 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('fonts/BebasNeue.otf') format("opentype")
+}
+
+*{
+	z-index: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('fonts/Oswald-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+
+/*FONTS*/
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 1920px;
+	background: #FFFFFF;
+	font-family: "BebasNeue", 'Oswald';
+	font: 'BebasNeue';
+}
+
+h1,h2,h3{
+	font-family: "BebasNeue";	
+}
+
+h1{
+	font-size: 60pt;
+}
+
+h3{
+	font-size: 26pt;
+	color:#494949;
+}
+
+span{
+	font-size: 22.5pt;
+}
+
+.clear{
+	clear: both;
+	overflow: hidden;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.grid-100{
+	width: 100%;
+}
+
+.grid-70{
+	width: 70%;
+}
+
+.grid-50{
+	width: 50%;
+}
+
+.prefix-15{
+	margin-left: 15%;
+}
+
+.fleft{
+	float: left;
+}
+
+.fright{
+	float: right;
+}
+
+#portfolio-section{
+	background-image: url("../img/bg-portfolio.png");
+	background-size: cover;
+	position: relative;
+
+	padding-left: 430px;
+	padding-right: 430px;
+	padding-bottom: 140px;
+	padding-top: 60px;
+
+	height: 100%;
+}
+
+#category1{
+	background-image: url('../img/BOTON CREATIVIDAD1.png');
+	background-size: cover;
+}
+
+#category2{
+	background-image: url('../img/BOTON ESTRATEGIA.png');
+	background-size: cover;
+}
+
+#category3{
+	background-image: url('../img/BOTON DIGITAL MARK.png');
+	background-size: cover;
+}
+
+#category4{
+	background-image: url('../img/BOTON DIGITAL TECH.png');
+	background-size: cover;
+}
+
+#category5{
+	background-image: url('../img/BOTON INTELLIGENCE.png');
+	background-size: cover;
+}
+
+#category6{
+	background-image: url('../img/BOTON LIVE EXPERIENCE.png');
+	background-size: cover;
+}
+
+.section-title, .work-title{
+	text-align: center;
+	text-transform: uppercase;
+
+	color: rgb(253,190,16);
+
+	margin-bottom: 35px;
+}
+
+.section-slogan, .work-title{
+	text-transform: uppercase;
+	display: inline-flex;
+
+	color: white;
+
+	padding: 0 120px;
+}
+
+#portfolio-section .section-header{
+	padding-bottom: 90px;
+}
+
+#portfolio-section .section-header span, .work-description span{
+	margin: 0 5px;
+	min-width: 410px;
+}
+
+.lines{
+	height: 2px;
+	width: 200px;
+	margin-top: 10px;
+	background-color: rgb(253,190,16);
+}
+
+.section-content{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.slider{
+	position: relative;
+}
+
+.category-slider, .client-slider{
+	padding-top: 50px;
+}
+
+.category, .category-info, .client{
+	height: 295px;
+}
+
+.category-slider{
+	opacity: 1;
+	z-index: 1;
+}
+
+.category, .client{
+	cursor: pointer;
+}
+
+.category{
+	background-color: white;
+}
+
+.category-info{
+	background-color: black;
+}
+
+.client-slider, .work-slider{
+	opacity: 0;
+	z-index: -1;
+}
+
+.client{
+	background-color: black;
+	color: white;
+}
+
+.client-holder{
+	width: 100%;
+	height: 100%;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: white;
+
+	padding: 2px;
+
+	font-size: 63pt;
+}
+
+.work-img{
+	height: 645px;
+	background-color: black;
+}
+
+.work-title{
+	margin-top: 95px;
+}
+
+.work-slogan{
+	font-size: 25pt;
+	color: white;
+}
+
+.work-slogan p{
+	font-family: 'Oswald';
+	font-weight: 300;
+}
+.work-description .lines{
+	background-color: white;
+}
+
+.superponer{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.flechaIzq, .flechaDer{
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.flechaIzq{
+	left: 0;
+}
+
+.close{
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.hidden{
+	opacity: 0;
+	z-index: -1;
+}
