@@ -1,3 +1,5 @@
+var category;
+var work;
 $(document).ready(function(){
 	// PERKS //
 
@@ -14,7 +16,7 @@ $(document).ready(function(){
 	$('.flechaIzq-work, .flechaDer-work').css('top', position.top+272);
 
 	var position = $('#portfolio-section').position();
-	$('.close').css('top', position.top + 1400);
+	$('.close').css('top', position.top + 1350);
 	$('.close').css('left', position.left + $('.portfolio-section').width()+ 430*2 - $('.close').width() -50);
 
 	// SLIDERS //
@@ -36,41 +38,42 @@ $(document).ready(function(){
 	// UNBLOCKS CATEGORY INFO //
 
 	$("#category1").hover(function(){
-		$(".category-info-1").css("background-color","white");
+		$(".category-info-1 .category-img").css('display', 'block');
 	}, function(){
-		$(".category-info-1").css("background-color","black");
+		$(".category-info-1 .category-img").css('display', 'none');
 	});
 	$("#category2").hover(function(){
-		$(".category-info-2").css("background-color","white");
+		$(".category-info-2 .category-img").css('display', 'block');
 	}, function(){
-		$(".category-info-2").css("background-color","black");
+		$(".category-info-2 .category-img").css('display', 'none');
 	});
 	$("#category3").hover(function(){
-		$(".category-info-3").css("background-color","white");
+		$(".category-info-3 .category-img").css('display', 'block');
 	}, function(){
-		$(".category-info-3").css("background-color","black");
+		$(".category-info-3 .category-img").css('display', 'none');
 	});
 
 	$("#category4").hover(function(){
-		$(".category-info-4").css("background-color","white");
+		$(".category-info-4 .category-img").css('display', 'block');
 	}, function(){
-		$(".category-info-4").css("background-color","black");
+		$(".category-info-4 .category-img").css('display', 'none');
 	});
 	$("#category5").hover(function(){
-		$(".category-info-5").css("background-color","white");
+		$(".category-info-5 .category-img").css('display', 'block');
 	}, function(){
-		$(".category-info-5").css("background-color","black");
+		$(".category-info-5 .category-img").css('display', 'none');
 	});
 	$("#category6").hover(function(){
-		$(".category-info-6").css("background-color","white");
+		$(".category-info-6 .category-img").css('display', 'block');
 	}, function(){
-		$(".category-info-6").css("background-color","black");
+		$(".category-info-6 .category-img").css('display', 'none');
 	});
 
 	// GO TO CLIENTS //
 	$(".category").click(function(){
 
 		var title= $(this).data('title');
+		category = title;
 		var id = $(this).data('id');
 		var description = $(this).data('description');
 
@@ -86,24 +89,40 @@ $(document).ready(function(){
 
 				loadClients(result);
 
-				$("#portfolio-section .section-title").text(title);
-				$("#portfolio-section .section-header span").text(description);
+				$("#portfolio-section .section-header span").text(title);
 				
 
 				$('.client').on('click', clickClient);
+				$('.client').hover(function(){
+					var div = $(this);
+					var img = div.data('img');
+
+
+					div.children().children().css('display','none');
+
+					div.css('background-image', 'url("../img/'+img+'")');
+				}, function(){
+					var div = $(this);
+
+					div.children().children().css('display','block');
+					div.css('background-image', 'none');
+
+				});
 
 				$('.flechaIzq-category, .flechaDer-category').addClass('hidden');
 				$('.flechaIzq-client, .flechaDer-client').removeClass('hidden');
 
-				$('.close-clients').removeClass('hidden');
+				$('.close-clients').css('display','block');
 				$('.close-clients').on('click',function(){
+					$("#portfolio-section .section-header span").text('lorem ipsum dolor sit amet, consectetur');
+
 					$(".client-slider").css({'opacity':0, 'z-index':-1});
 					$(".category-slider").css({'opacity':1, 'z-index':1});
 
 					$('.flechaIzq-client, .flechaDer-client').addClass('hidden');
 					$('.flechaIzq-category, .flechaDer-category').removeClass('hidden');
 
-					$('.close-clients').addClass('hidden');-category
+					$('.close-clients').css('display','none');
 				});
 
 				$(".client-slider").slick({
@@ -129,20 +148,30 @@ function loadClients(clients){
 	for (var i = 0; i < slides; i++) {
 		var content = '<div class="section-content grid-100 clearfix">';
 
-		content+= '<div class="client grid-50 fleft" data-id="'+clients[i*6].id +'">';
-		content+= '<div class="client-holder">';
-		content+= clients[i*6].name+'</div></div>';
-		content+= '<div class="client grid-50 fright" data-id="'+clients[(i*6)+1].id +'">';
-		content+= clients[(i*6)+1].name+'</div>';
-		content+= '<div class="client grid-50 fleft" data-id="'+clients[(i*6)+2].id +'">';
-		content+= clients[(i*6)+2].name+'</div>';
-		content+= '<div class="client grid-50 fright" data-id="'+clients[(i*6)+3].id +'">';
-		content+= clients[(i*6)+3].name+'</div>';
-		content+= '<div class="client grid-50 fleft" data-id="'+clients[(i*6)+4].id +'">';
-		content+= clients[(i*6)+4].name+'</div>';
-		content+= '<div class="client grid-50 fright" data-id="'+clients[(i*6)+5].id +'">';
-		content+= clients[(i*6)+5].name+'</div>';
-		content+= '</div>';
+		content+= '<div class="client grid-50 fleft" data-id="'+clients[i*6].id +'" data-img="';
+		content+= clients[i*6]+'">';
+		content+= '<div class="client-holder"><div class="client-span"><span>';
+		content+= clients[i*6].name+'</span></div></div></div>';
+		content+= '<div class="client grid-50 fright" data-id="'+clients[(i*6)+1].id +'" data-img="';
+		content+= clients[(i*6)+1].image +'">';
+		content+= '<div class="client-holder"><div class="client-span"><span>';
+		content+= clients[(i*6)+1].name+'</span></div></div>';
+		content+= '<div class="client grid-50 fleft" data-id="'+clients[(i*6)+2].id +'" data-img="';
+		content+= clients[(i*6)+2].image +'">';
+		content+= '<div class="client-holder"><div class="client-span"><span>';
+		content+= clients[(i*6)+2].name+'</span></div></div>';
+		content+= '<div class="client grid-50 fright" data-id="'+clients[(i*6)+3].id +'" data-img="';
+		content+= clients[(i*6)+3].image +'">';
+		content+= '<div class="client-holder"><div class="client-span"><span>';
+		content+= clients[(i*6)+3].name+'</span></div></div>';
+		content+= '<div class="client grid-50 fleft" data-id="'+clients[(i*6)+4].id +'" data-img="';
+		content+= clients[(i*6)+4].image +'">';
+		content+= '<div class="client-holder"><div class="client-span"><span>';
+		content+= clients[(i*6)+4].name+'</span></div></div>';
+		content+= '<div class="client grid-50 fright" data-id="'+clients[(i*6)+5].id +'" data-img="';
+		content+= clients[(i*6)+5].image +'">';
+		content+= '<div class="client-holder"><div class="client-span"><span>';
+		content+= clients[(i*6)+5].name+'</span></div></div></div>';
 
 		slider.append(content);
 	}
@@ -154,13 +183,15 @@ function loadClients(clients){
 
 
 		if (i%2 == 0) {
-			content+= '<div class="client grid-50 fleft" data-id="'+clients[i+(6*slides)].id +'">';
-			content+= '<div class="client-holder">';
-			content+= clients[i+(6*slides)].name+'</div></div>';
+			content+= '<div class="client grid-50 fleft" data-id="'+clients[i+(6*slides)].id +'" data-img="';
+			content+= clients[i+(6*slides)].image +'">';
+			content+= '<div class="client-holder"><div class="client-span"><span>';
+			content+= clients[i+(6*slides)].name+'</span></div></div></div>';
 		} else{
-			content+= '<div class="client grid-50 fright" data-id="'+clients[i+(6*slides)].id +'">';
-			content+= '<div class="client-holder">';
-			content+= clients[i+(6*slides)].name+'</div></div>';
+			content+= '<div class="client grid-50 fright" data-id="'+clients[i+(6*slides)].id +'" data-img="';
+			content+= clients[i+(6*slides)].image +'">';
+			content+= '<div class="client-holder"><div class="client-span"><span>';
+			content+= clients[i+(6*slides)].name+'</span></div></div></div>';
 		}
 	}
 
@@ -169,6 +200,7 @@ function loadClients(clients){
 
 function clickClient(){
 	var id = $(this).data('id');
+	var name = $(this).children().children().text();
 	var uri = '/works/'+id;
 
 	$(".work-slider").slick('unslick');
@@ -185,10 +217,12 @@ function clickClient(){
 			$('.flechaIzq-client, .flechaDer-client').addClass('hidden');
 			$('.flechaIzq-work, .flechaDer-work').removeClass('hidden');
 
-			$('.close-clients').addClass('hidden');
-			$('.close-works').removeClass('hidden');
+			$('.close-clients').css('display', 'none');
+			$('.close-works').css('display', 'block');
 
 			$('.close-works').on('click', function(){
+
+				$("#portfolio-section .section-header span").text(category);
 
 				$(".work-slider").css({'opacity':0, 'z-index':-1});
 				$(".client-slider").css({'opacity':1, 'z-index':1});
@@ -196,8 +230,8 @@ function clickClient(){
 				$('.flechaIzq-work, .flechaDer-work').addClass('hidden');
 				$('.flechaIzq-client, .flechaDer-client').removeClass('hidden');
 
-				$('.close-works').addClass('hidden');
-				$('.close-clients').removeClass('hidden');
+				$('.close-works').css('display', 'none');
+				$('.close-clients').css('display', 'block');
 			});
 
 			$(".work-slider").slick({
@@ -205,7 +239,7 @@ function clickClient(){
 				nextArrow: $(".flechaDer-work")
 			});
 
-
+			$("#portfolio-section .section-header span").text(name);
 
 			$(".client-slider").css({'opacity':0, 'z-index':-1});
 			$(".work-slider").css({'opacity':1, 'z-index':1});
@@ -219,16 +253,16 @@ function loadWorks(works){
 
 	for (var i = 0; i < works.length; i++) {
 		var content = '<div class="section-content grid-100 clearfix">';
-		content+= '<div class="work-img">';
+		content+= '<div class="work-img"><img src="img/';
 		content+= works[i].image;
-		content+= '</div>';
+		content+= '"></div>';
 		content+= '<div class="work-description">';
 		content+= '<div class="work-title">';
 		content+= '<div class="lines"></div>';
 		content+= '<span>'+ works[i].title+'</span>';
 		content+= '<div class="lines"></div> </div>';
 		content+= '<div class="work-slogan">';
-		content+= '<p>'+works[i].description+'</p> </div>';
+		content+= '<p>'+works[i].description+'</p></div>';
 		content+= '</div></div>';
 	
 		slider.append(content);

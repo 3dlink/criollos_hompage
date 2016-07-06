@@ -16,6 +16,10 @@ Route::get('/', [
     'as'    =>  'index'
 ]);
 
+Route::post('contact', [
+    'uses'  =>  'mainController@contact'
+]);
+
 Route::get('/clients/{id}', [
     'uses'  =>  'ClientsController@get'
 ]);

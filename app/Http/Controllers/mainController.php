@@ -8,17 +8,47 @@ use App\Http\Requests;
 use App\Category;
 use App\Client;
 use App\Work;
+use Validator;
+use Mail;
 
 class mainController extends Controller
 {
 	public function index(){
-		$client= Category::find(1)->clients;
-		$work = [];
+		return view('index');
+	}
 
-		foreach ($client as $key) {
-			$work[$key->id] = Client::find($key->id)->works;
-		};
+	public function contact (Request $request){
 
-		return view('index')->with('client',$client)->with('work',$work);
+		$validator = Validator::make($request->all(), [
+			'name' => 'required',
+			'email' => 'required|email',
+			'motivation' => 'required',
+			'message' => 'required'
+			]);
+
+		if ($validator->fails()) {
+			return redirect("/#contact-section")
+			->withErrors($validator);
+		}
+
+		$contact = [];
+		$contact['name'] = $request -> name;
+		$contact['email'] = $request -> email;
+		$contact['motivation'] = $request -> motivation;
+		$contact['message'] = $request -> message;
+
+		$sent= Mail::send('mail.contact', array('contact' => $contact), function ($m){
+			$m->from('hello@criollos.com');
+			$m->to("o0serras0o@gmail.com");
+			$m->subject("It's alive!");
+		});
+
+		if (!$sent) {
+			$request->session()->flash('mail','Email could not be delivered. Please try again later!');
+			return redirect('/#contact-section');
+		}
+
+		$request->session()->flash('mail','Email has been sent!');
+		return redirect('/#contact-section');
 	}
 }
