@@ -6,25 +6,41 @@ $(document).ready(function(){
 	var spanH = $('#portfolio-section .section-header span').height();
 	$('#portfolio-section .section-header .lines').css('margin-top', spanH/2);
 
+	spanH = $('#service-section .section-header span').height();
+	$('#service-section .section-header .lines').css('margin-top', spanH/2);
+
+	spanH = $('#contact-section .section-header span').height();
+	$('#contact-section .section-header .lines').css('margin-top', spanH/2);
+
 
 	// ARROWS & X POSITION //
-	var position = $('.slider').position();
+	var position = $('.service-slider').position();
+	$('.flechaIzq-service').css('left', position.left-115);
+	$('.flechaDer-service').css('left', position.left+1360+72);
+
+	$('.flechaIzq-service, .flechaDer-service').css('top', position.top + 200);
+
+	position = $('.slider').position();
 	$('.flechaIzq-category, .flechaDer-category, .flechaIzq-client, .flechaDer-client').css('top', position.top+442);
-	$('.flechaIzq').css('left', position.left-137);
-	$('.flechaDer').css('left', position.left+$('.slider').width()+85);
+	$('.flechaIzq-category, .flechaIzq-client, .flechaIzq-work').css('left', position.left-137);
+	$('.flechaDer-category, .flechaDer-client, .flechaDer-work').css('left', position.left+$('.slider').width()+85);
 
 	$('.flechaIzq-work, .flechaDer-work').css('top', position.top+272);
 
-	var position = $('#portfolio-section').position();
-	$('.close').css('top', position.top + 1350);
-	$('.close').css('left', position.left + $('.portfolio-section').width()+ 430*2 - $('.close').width() -50);
+	$('.close').css('top', position.top + 900);
+	$('.close').css('left', position.left + $('.slider').width()+ 430 - $('.close').width() -50);
 
 	// SLIDERS //
 
+	$(".service-slider").slick({
+		draggable: false,
+		prevArrow: $(".flechaIzq-service"),
+		nextArrow: $(".flechaDer-service")
+	});
 	$(".category-slider").slick({
 		draggable: false,
-		prevArrow: $(".flechaIzq"),
-		nextArrow: $(".flechaDer")
+		prevArrow: $(".flechaIzq-category"),
+		nextArrow: $(".flechaDer-category")
 	});
 	$(".client-slider").slick({
 		prevArrow: $(".flechaIzq-client"),

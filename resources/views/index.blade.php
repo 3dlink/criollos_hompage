@@ -17,6 +17,112 @@
 <body>
 
 <div class="clearfix">
+	<section id="service-section" class="service-section">
+		<div class="section-container">
+			<header class="section-header">
+				<h1 class="section-title">Servicios</h1>
+				<div class="section-slogan">
+					<div class="lines fleft"></div>
+					<span>lorem ipsum dolor sit amet, consectetur</span>
+					<div class="lines fright"></div>
+				</div>
+			</header>
+
+			<div class="flechaIzq flechaIzq-service">
+				<img src="{{URL::asset('img/FLECHA 1.png')}}">
+			</div>
+			<div class="flechaDer flechaDer-service">
+				<img src="{{URL::asset('img/FLECHA 2.png')}}">
+			</div>
+
+			<div class="service-span">
+				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu varius augue. Etiam sodales elementum laoreet. Vestibulum eu convallis est. </span>
+			</div>
+
+			<div class="service-slider services grid-100 clearfix">
+				<div>
+					<div class="flip-container">
+						<div class="service-container grid-30 fleft service-style1 flipper">
+							<div class="service-info back">
+								<h3 class="service-title" style="color:white;">Branding &amp; Creativity</h3>
+								<div class="lines"></div>
+								<p class="service-desc">Conceptualización de ideas o imagen de marca (Aquí participan Redactores, Diseñadores, Productores y hasta Directores, ellos son los creativos de la agencia).</p>
+							</div>
+							<div class="service-img front">
+								<img src="img/BOTON CREATIVIDAD.png">
+							</div>
+						</div>
+					</div>
+
+					<div class="flip-container">
+						<div class="service-container grid-30 fleft prefix-1 sufix-1 service-style2 flipper">
+							<div class="service-info back">
+								<h3 class="service-title">Strategy &amp; media planning</h3>
+								<div class="lines"></div>
+								<p class="service-desc">Creemos en la eficiencia del presupuesto de nuestros anunciantes y desde acá planteamos conexión con el concepto creativo y los transformamos en una estrategia efectiva para la entrega del mensaje (están los númericos del equipo, planificadores y analistas, ellos son nuestros estrategas).</p>
+							</div>
+							<div class="service-img front">
+								<img src="img/BOTON ESTRATEGIA1.png">
+							</div>
+						</div>
+					</div>
+					<div class="flip-container">						<div class="service-container grid-30 fleft service-style1 flipper">
+							<div class="service-info back">
+								<h3 class="service-title" style="color:white;">Digital Marketing &amp; analitycs</h3>
+								<div class="lines"></div>
+								<p class="service-desc">Acá vemos el lienzo completo del internet y damos solucion a la estrategia pero visto desde el ecosistema digital completo (Se junta lo mejor de dos mundos creatividad y estrategia + todas las plataformas digitales, este equipo vive conectado).</p>
+							</div>
+							<div class="service-img front">
+								<img src="img/BOTON DIGITAL MEDIA.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="flip-container">
+						<div class="service-container grid-30 fleft service-style2 flipper">
+							<div class="service-info back">
+								<h3 class="service-title">Digital Technology</h3>
+								<div class="lines"></div>
+								<p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu varius augue. Etiam sodales elementum laoreet. Vestibulum eu convallis est. </p>
+							</div>
+							<div class="service-img front">
+								<img src="img/BOTON DIGITAL TECH1.png">
+							</div>
+						</div>
+					</div>
+					<div class="flip-container">
+						<div class="service-container grid-30 fleft prefix-1 sufix-1 service-style1 flipper">
+							<div class="service-info back">
+								<h3 class="service-title" style="color:white;">intelligence insight</h3>
+								<div class="lines"></div>
+								<p class="service-desc">Ninguna idea puede cobrar vida sin antes haber sido investigada o estudiada (No son ratones de biblioteca o los hermanos perdidos de Google, pero este equipo sabe todo acerca del consumidor).</p>
+							</div>
+							<div class="service-img front">
+								<img src="img/BOTON INTELLIGENCE IN.png">
+							</div>
+						</div>
+					</div>
+
+					<div class="flip-container">
+						<div class="service-container grid-30 fleft service-style2 flipper">
+							<div class="service-info back">
+								<h3 class="service-title" >live experience</h3>
+								<div class="lines"></div>
+								<p class="service-desc">Lograr que nuestrar idean sean memorables para el consumidor es lo más importante. (Está es nuestra gente guerrera, este equipo esta prepaador para producir eventos en tiempo record, desde productores, carpinteros hasta promotoras).</p>
+							</div>
+							<div class="service-img front">
+								<img src="img/BOTON LIVE EX.png">
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="clearfix">
 	<section id="portfolio-section" class="portfolio-section">
 		<div class="section-container grid-100">
 			<header class="section-header">
@@ -31,14 +137,14 @@
 			<div class="flechaIzq flechaIzq-category">
 				<img src="{{URL::asset('img/flecha1.png')}}">
 			</div>
-			<div class="flechaDer flechaIzq-category">
+			<div class="flechaDer flechaDer-category">
 				<img src="{{URL::asset('img/flecha2.png')}}">
 			</div>
 
 			<div class="flechaIzq flechaIzq-client hidden">
 				<img src="{{URL::asset('img/flecha1.png')}}">
 			</div>
-			<div class="flechaDer flechaIzq-client hidden">
+			<div class="flechaDer flechaDer-client hidden">
 				<img src="{{URL::asset('img/flecha2.png')}}">
 			</div>
 
@@ -188,11 +294,11 @@
 
 					<div class="social-links">
 						<ul class="grid-100">
-							<li><img src="img/FB.png"></li>
-							<li><img src="img/IN.png"></li>
-							<li><img src="img/TW.png"></li>
-							<li><img src="img/IG.png"></li>
-							<li><img src="img/YOUTUBE.png"></li>
+							<li><a href="https://www.facebook.com/CriollosFA/" target="_blank"><img src="img/FB.png"></a></li>
+							<li><a href="https://www.linkedin.com/company/2640001" target="_blank"><img src="img/IN.png"></a></li>
+							<li><a href="https://twitter.com/CriollosFA?lang=es" target="_blank"><img src="img/TW.png"></a></li>
+							<li><a href="https://www.instagram.com/criollosfa/" target="_blank"><img src="img/IG.png"></a></li>
+							<li><a href="https://www.youtube.com" target="_blank"><img src="img/YOUTUBE.png"></a></li>
 						</ul>
 						<div class="correo">
 							<img src="img/CORREO.png">info@criollogroup.com
@@ -209,7 +315,6 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="https://use.fontawesome.com/011b552131.js"></script>
 <script type="text/javascript" src="{{URL::asset('js/slick/slick.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/criollos.js')}}"></script>
 
