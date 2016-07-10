@@ -30,6 +30,12 @@ $(document).ready(function(){
 	$('.close').css('top', position.top + 900);
 	$('.close').css('left', position.left + $('.slider').width()+ 430 - $('.close').width() -50);
 
+	// FLIP //
+	$('.flipper').flip({
+		axis: 'x',
+		trigger: 'hover'
+	});
+
 	// SLIDERS //
 
 	$(".service-slider").slick({
@@ -42,10 +48,7 @@ $(document).ready(function(){
 		prevArrow: $(".flechaIzq-category"),
 		nextArrow: $(".flechaDer-category")
 	});
-	$(".client-slider").slick({
-		prevArrow: $(".flechaIzq-client"),
-		nextArrow: $(".flechaDer-client")
-	});
+
 	$(".work-slider").slick({
 		prevArrow: $(".flechaIzq-work"),
 		nextArrow: $(".flechaDer-work")
@@ -54,35 +57,35 @@ $(document).ready(function(){
 	// UNBLOCKS CATEGORY INFO //
 
 	$("#category1").hover(function(){
-		$(".category-info-1 .category-img").css('display', 'block');
+		$(".category-info-1 .mask").css('display', 'none');
 	}, function(){
-		$(".category-info-1 .category-img").css('display', 'none');
+		$(".category-info-1 .mask").css('display', 'block');
 	});
 	$("#category2").hover(function(){
-		$(".category-info-2 .category-img").css('display', 'block');
+		$(".category-info-2 .mask").css('display', 'none');
 	}, function(){
-		$(".category-info-2 .category-img").css('display', 'none');
+		$(".category-info-2 .mask").css('display', 'block');
 	});
 	$("#category3").hover(function(){
-		$(".category-info-3 .category-img").css('display', 'block');
+		$(".category-info-3 .mask").css('display', 'none');
 	}, function(){
-		$(".category-info-3 .category-img").css('display', 'none');
+		$(".category-info-3 .mask").css('display', 'block');
 	});
 
 	$("#category4").hover(function(){
-		$(".category-info-4 .category-img").css('display', 'block');
+		$(".category-info-4 .mask").css('display', 'none');
 	}, function(){
-		$(".category-info-4 .category-img").css('display', 'none');
+		$(".category-info-4 .mask").css('display', 'block');
 	});
 	$("#category5").hover(function(){
-		$(".category-info-5 .category-img").css('display', 'block');
+		$(".category-info-5 .mask").css('display', 'none');
 	}, function(){
-		$(".category-info-5 .category-img").css('display', 'none');
+		$(".category-info-5 .mask").css('display', 'block');
 	});
 	$("#category6").hover(function(){
-		$(".category-info-6 .category-img").css('display', 'block');
+		$(".category-info-6 .mask").css('display', 'none');
 	}, function(){
-		$(".category-info-6 .category-img").css('display', 'none');
+		$(".category-info-6 .mask").css('display', 'block');
 	});
 
 	// GO TO CLIENTS //
@@ -93,7 +96,7 @@ $(document).ready(function(){
 		var id = $(this).data('id');
 		var description = $(this).data('description');
 
-		var uri = '/clients/'+id;
+		var uri = 'http://localhost/3d/criollos_hompage/public/clients/'+id;
 
 		$(".client-slider").slick('unslick');
 
@@ -217,7 +220,7 @@ function loadClients(clients){
 function clickClient(){
 	var id = $(this).data('id');
 	var name = $(this).children().children().text();
-	var uri = '/works/'+id;
+	var uri = 'http://localhost/3d/criollos_hompage/public/works/'+id;
 
 	$(".work-slider").slick('unslick');
 
