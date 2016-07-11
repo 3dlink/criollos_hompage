@@ -16,7 +16,7 @@ $(document).ready(function(){
 	// ARROWS & X POSITION //
 	var position = $('.service-slider').position();
 	$('.flechaIzq-service').css('left', position.left-115);
-	$('.flechaDer-service').css('left', position.left+1360+72);
+	$('.flechaDer-service').css('left', position.left+$('.service-slider').width()+72);
 
 	$('.flechaIzq-service, .flechaDer-service').css('top', position.top + 200);
 
@@ -48,7 +48,11 @@ $(document).ready(function(){
 		prevArrow: $(".flechaIzq-category"),
 		nextArrow: $(".flechaDer-category")
 	});
-
+	$(".client-slider").slick({
+		draggable: false,
+		prevArrow: $(".flechaIzq-client"),
+		nextArrow: $(".flechaDer-client")
+	});
 	$(".work-slider").slick({
 		prevArrow: $(".flechaIzq-work"),
 		nextArrow: $(".flechaDer-work")
@@ -96,7 +100,7 @@ $(document).ready(function(){
 		var id = $(this).data('id');
 		var description = $(this).data('description');
 
-		var uri = 'http://localhost/3d/criollos_hompage/public/clients/'+id;
+		var uri = 'clients/'+id;
 
 		$(".client-slider").slick('unslick');
 
@@ -220,7 +224,7 @@ function loadClients(clients){
 function clickClient(){
 	var id = $(this).data('id');
 	var name = $(this).children().children().text();
-	var uri = 'http://localhost/3d/criollos_hompage/public/works/'+id;
+	var uri = 'works/'+id;
 
 	$(".work-slider").slick('unslick');
 
