@@ -156,7 +156,7 @@
 								<div class="service-info back service-style2">
 									<h3 class="service-title">Digital Technology</h3>
 									<div class="lines"></div>
-									<p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu varius augue. Etiam sodales elementum laoreet. Vestibulum eu convallis est. </p>
+									<p class="service-desc">En esta era donde digital cobra mucho más fuerza con el tiempo, creemos que lo más importante es ir creciendo con el mismo, por eso la importancia de poder desarrollar herramientas tecnológicas que ofrezcan soluciones a nuestros inventos.</p>
 								</div>
 								<div class="service-img front">
 									<img src="img/BOTON DIGITAL TECH1.png">
