@@ -38,7 +38,6 @@ class mainController extends Controller
 		$contact['message'] = $request -> message;
 
 		$sent= Mail::send('mail.contact', array('contact' => $contact), function ($m){
-			$m->from('hello@criollos.com');
 			$m->to("o0serras0o@gmail.com");
 			$m->subject("It's alive!");
 		});

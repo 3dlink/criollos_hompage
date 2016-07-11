@@ -292,6 +292,5 @@ function loadWorks(works){
 	}
 
 	var spanH = $('.work-description span').height();
-	// $('.work-description .lines').css('margin-top', spanH/2);
 
 };

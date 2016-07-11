@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'mail'),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'sc2.conectarhosting.com'),
+    'host' => env('MAIL_HOST', 'p3plcpnl0213.prod.phx3.secureserver.net'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 26),
+    'port' => env('MAIL_PORT', 465),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'hello@purpledash.com', 'name' => 'PurpleDash'],
+    'from' => ['address' => 'info@CriollosGroup.com', 'name' => 'CriollosGroup'],
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'username' => 'cesar@cahl.com.ve',
+    'username' => 'info@CriollosGroup.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return [
     |
     */
 
-    'password' => 7819920,
+    'password' =>  '58Madagascar2015',
 
     /*
     |--------------------------------------------------------------------------
