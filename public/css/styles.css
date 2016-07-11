@@ -1,5 +1,17 @@
 /* FONTS */
 
+*::-webkit-input-placeholder {
+    color: #FFF !important;
+}
+
+*:-moz-placeholder {
+    color: #FFF !important;
+}
+
+*:-ms-input-placeholder {
+    color: #FFF !important;
+}
+
 @font-face {
     font-family: 'BebasNeue';
     src: url('fonts/BebasNeue.otf') format("opentype");
@@ -44,7 +56,7 @@ body {
 }
 
 h1,h2,h3{
-	font-family: "BebasNeue";	
+	font-family: "BebasNeue";
 }
 
 h1{
@@ -177,12 +189,12 @@ header nav{
 
 #home-section img{
 	width: 100%;
-}	
+}
 
 .clients-section{
     width: 100%;
     padding: 30px 150px 80px;
-}	
+}
 
 #nosotros-section{
 	background-color: #fff;
@@ -721,6 +733,7 @@ footer{
 }
 
 .contact .info h2, .correo{
+  font-style: italic;
 	text-transform: uppercase;
 	font-family: 'Oswald';
 	font-weight: 400;
@@ -734,7 +747,7 @@ footer{
 	font-style: normal;
 }
 .correo img{
-	    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .contact .info ul{

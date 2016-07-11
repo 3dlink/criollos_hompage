@@ -4,13 +4,13 @@ $(document).ready(function(){
 	// PERKS //
 
 	var spanH = $('#portfolio-section .section-header span').height();
-	$('#portfolio-section .section-header .lines').css('margin-top', spanH/2);
+	// $('#portfolio-section .section-header .lines').css('margin-top', spanH/2);
 
 	spanH = $('#service-section .section-header span').height();
-	$('#service-section .section-header .lines').css('margin-top', spanH/2);
+	// $('#service-section .section-header .lines').css('margin-top', spanH/2);
 
 	spanH = $('#contact-section .section-header span').height();
-	$('#contact-section .section-header .lines').css('margin-top', spanH/2);
+	// $('#contact-section .section-header .lines').css('margin-top', spanH/2);
 
 
 	// ARROWS & X POSITION //
@@ -113,7 +113,7 @@ $(document).ready(function(){
 				loadClients(result);
 
 				$("#portfolio-section .section-header span").text(title);
-				
+
 
 				$('.client').on('click', clickClient);
 				$('.client').hover(function(){
@@ -202,7 +202,7 @@ function loadClients(clients){
 	var content = '<div class="section-content grid-100 clearfix">';
 
 	for (var i = 0; i < remain; i++) {
-		
+
 
 
 		if (i%2 == 0) {
@@ -287,11 +287,11 @@ function loadWorks(works){
 		content+= '<div class="work-slogan">';
 		content+= '<p>'+works[i].description+'</p></div>';
 		content+= '</div></div>';
-	
+
 		slider.append(content);
 	}
 
 	var spanH = $('.work-description span').height();
-	$('.work-description .lines').css('margin-top', spanH/2);
+	// $('.work-description .lines').css('margin-top', spanH/2);
 
 };
