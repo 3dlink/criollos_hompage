@@ -14,21 +14,11 @@ $(document).ready(function(){
 
 
 	// ARROWS & X POSITION //
-	var position = $('.service-slider').position();
-	$('.flechaIzq-service').css('left', position.left-115);
-	$('.flechaDer-service').css('left', position.left+$('.service-slider').width()+72);
+	$(window).resize(function(){
+		locateArrows();
+	});
 
-	$('.flechaIzq-service, .flechaDer-service').css('top', position.top + 200);
-
-	position = $('.slider').position();
-	$('.flechaIzq-category, .flechaDer-category, .flechaIzq-client, .flechaDer-client').css('top', position.top+442);
-	$('.flechaIzq-category, .flechaIzq-client, .flechaIzq-work').css('left', position.left-137);
-	$('.flechaDer-category, .flechaDer-client, .flechaDer-work').css('left', position.left+$('.slider').width()+85);
-
-	$('.flechaIzq-work, .flechaDer-work').css('top', position.top+272);
-
-	$('.close').css('top', position.top + 900);
-	$('.close').css('left', position.left + $('.slider').width()+ 430 - $('.close').width() -50);
+	locateArrows();
 
 	// FLIP //
 	$('.flipper').flip({
@@ -53,7 +43,7 @@ $(document).ready(function(){
 		prevArrow: $(".flechaIzq-client"),
 		nextArrow: $(".flechaDer-client")
 	});
-	$(".work-slider").slick({
+	$(".work-slider .w-slider").slick({
 		prevArrow: $(".flechaIzq-work"),
 		nextArrow: $(".flechaDer-work")
 	});
@@ -114,21 +104,22 @@ $(document).ready(function(){
 
 				$("#portfolio-section .section-header span").text(title);
 
+				$('.client').each(function(){
+					var div = $(this);
+					var img = div.data('img');
+					div.css('background-image', 'url("img/'+img+'")');
+				});
 
 				$('.client').on('click', clickClient);
 				$('.client').hover(function(){
 					var div = $(this);
-					var img = div.data('img');
-
 
 					div.children().children().css('display','none');
 
-					div.css('background-image', 'url("../img/'+img+'")');
 				}, function(){
 					var div = $(this);
 
 					div.children().children().css('display','block');
-					div.css('background-image', 'none');
 
 				});
 
@@ -226,7 +217,7 @@ function clickClient(){
 	var name = $(this).children().children().text();
 	var uri = 'works/'+id;
 
-	$(".work-slider").slick('unslick');
+	$(".work-slider .w-slider").slick('unslick');
 
 	$.ajax({
 		url: uri,
@@ -257,7 +248,7 @@ function clickClient(){
 				$('.close-clients').css('display', 'block');
 			});
 
-			$(".work-slider").slick({
+			$(".work-slider .w-slider").slick({
 				prevArrow: $(".flechaIzq-work"),
 				nextArrow: $(".flechaDer-work")
 			});
@@ -270,27 +261,42 @@ function clickClient(){
 	});
 }
 
-function loadWorks(works){
-	var slider = $('.work-slider');
+function loadWorks(work){
+	var slider = $('.work-slider .w-slider');
 	slider.empty();
 
-	for (var i = 0; i < works.length; i++) {
+	$('.work-title span').text(work.title);
+	$('.work-slogan p').text(work.description);
+
+	for (var i = 0; i < work.images.length; i++) {
 		var content = '<div class="section-content grid-100 clearfix">';
 		content+= '<div class="work-img"><img src="img/';
-		content+= works[i].image;
+		content+= work.images[i].image;
 		content+= '"></div>';
-		content+= '<div class="work-description">';
-		content+= '<div class="work-title">';
-		content+= '<div class="lines"></div>';
-		content+= '<span>'+ works[i].title+'</span>';
-		content+= '<div class="lines"></div> </div>';
-		content+= '<div class="work-slogan">';
-		content+= '<p>'+works[i].description+'</p></div>';
-		content+= '</div></div>';
+		content+= '</div>';
 
 		slider.append(content);
 	}
 
-	var spanH = $('.work-description span').height();
-
 };
+
+function locateArrows(){
+	var position = $('.service-slider').position();
+	$('.flechaIzq-service').css('left', position.left-115);
+	$('.flechaDer-service').css('left', position.left+$('.service-slider').width()+72);
+
+	$('.flechaIzq-service, .flechaDer-service').css('top', position.top + 200);
+
+	position = $('.slider').position();
+	$('.flechaIzq-category, .flechaDer-category, .flechaIzq-client, .flechaDer-client').css('top', position.top+442);
+	$('.flechaIzq-category, .flechaIzq-client, .flechaIzq-work').css('left', position.left-137);
+	$('.flechaDer-category, .flechaDer-client, .flechaDer-work').css('left', position.left+$('.slider').width()+85);
+
+	$('.flechaIzq-work, .flechaDer-work').css('top', position.top+272);
+
+	$('.close').css('top', position.top + 900);
+	$('.close').css('left', position.left + $('.slider').width()+ 430 - $('.close').width() -50);
+
+}
+
+

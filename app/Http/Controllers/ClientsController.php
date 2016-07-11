@@ -72,6 +72,7 @@ class ClientsController extends Controller
 		$client -> name = $request -> name;
 		$client -> image = $filename;
 		$client -> originalImgName = $request->file('originalImgName')->getClientOriginalName();
+        $client -> hasWork = 0;
 
 		$category = session()->get('category');
 		$client-> category_id = $category->id;

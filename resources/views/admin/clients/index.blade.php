@@ -23,7 +23,12 @@
 									<td>{{$client->originalImgName}}</td>
 									<td>
 										<a class="itemAction" href="{{ route('admin.clients.edit', $client->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+										@if(!$client->hasWork)
+										<a class="itemAction" href="{{ route('admin.works.create', $client->id)}}"><i class="fa fa-plus" aria-hidden="true"></i>
+										</a>
+										@else
 										<a class="itemAction" href="{{ route('admin.clients.show', $client->id) }}"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
+										@endif
 										<a class="itemAction" href="" data-toggle="modal" data-target="#myModal{{$client->id}}""><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 
 									</td>

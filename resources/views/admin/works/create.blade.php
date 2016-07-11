@@ -26,11 +26,11 @@
 
 						<div class="form-group">
 							{!! Form::label('originalImgName', 'Image') !!}
-							{!! Form::text('holder', 'Choose Image', array('disabled'=>'disabled', 'class' => 'form-control uploadSpan', 'id' => 'frontUpload')) !!}
+							{!! Form::text('holder', 'Choose Images', array('disabled'=>'disabled', 'class' => 'form-control uploadSpan', 'id' => 'frontUpload')) !!}
 							
 							<div class="fileUpload btn btn-info">
 								<span>Browse...</span>
-								{!! Form::file('originalImgName', array('class' => 'upload')) !!}
+								{!! Form::file('originalImgName[]', array('class' => 'upload','multiple'=>true)) !!}
 							</div>
 
 							<span class="msjError"> @if ($errors->first('originalImgName')) *{{ $errors->first('originalImgName') }} @endif</span>
@@ -38,7 +38,7 @@
 	            </div>
 
 	            <div class="panel-footer">
-	            	<a href="{{ route('admin.works.index', $client->id) }}"><button class="btn btn-default" type="button">Back</button></a>
+	            	<a href="{{ route('admin.clients.index', session()->get('category')) }}"><button class="btn btn-default" type="button">Back</button></a>
 					{!! Form::submit('Add Work', array('class'=>'btn btn-primary')) !!}
 				</div>
 				{!! Form::close() !!}

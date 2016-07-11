@@ -8,133 +8,160 @@ use App\Http\Requests;
 
 use App\Client;
 use App\Work;
+use App\Image;
+use Validator;
+use DB;
 
 class WorksController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index($id)
-    {
-        $works = Client::find($id)->works;
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function index($id)
+	{
+		$work = Client::find($id)->work;
+		$images = Work::find($work->id)->images;
 
-        return view('admin.works.index')->with('works', $works)->with('client', session()->get('client'));
-    }
+		session()->put('work', $work);
 
-    public function get($id){
-    	$works = Client::find($id)->works;
+		return view('admin.works.index')->with('work', $work)->with('images',$images)->with('client', session()->get('client'));
+   }
 
-    	return $works->toJson();
-    }
+	public function get($id){
+		$work = Client::find($id)->work;
+		$images = Work::find($work->id)->images;
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-    	return view('admin.works.create')->with('client', session()->get('client'));
-    }
+		$work = json_decode($work->toJson());
+		$images = json_decode($images->toJson());
+		$work -> images = $images;
+		
+		return json_encode($work);
+	}
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-    	$this -> validate($request,[
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function create($id)
+	{
+		$client = Client::find($id);        
+		session()->put('client',$client);
+
+		return view('admin.works.create')->with('client', session()->get('client'));
+	}
+
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @return \Illuminate\Http\Response
+	 */
+	public function store(Request $request)
+	{
+		$this -> validate($request,[
 			'title'  =>         'required',
-			'description'	=>	'required',
-			'originalImgName'   =>    'required|image'
+			'description'	=>	'required'
 		]);
 
 		$time = strtotime("now");
+		$files= [];
+		$files = $request->file('originalImgName');
 
-		if ($request->file('originalImgName')) 
-			$file = $request->file('originalImgName');
+		foreach ($files as $file) {
+			$rules = array('file' => 'required|image');
+			$validator = Validator::make(array('file'=> $file), $rules);
 
-
-		if(!empty($file)){
-			$filename="img".$time.$this->__randomStr ( 3 ).'.'.$file->getClientOriginalExtension();
-			$file->move(
-				base_path().'/public/img/', $filename
-				);
+			if ($validator->fails()) {
+				return redirect("admin.works.create")->withErrors($validator);
+			}
 		}
 
 		$work = new Work();
 		$work -> title = $request -> title;
 		$work -> description = $request -> description;
-		$work -> image = $filename;
-		$work -> originalName = $request->file('originalImgName')->getClientOriginalName();
-
 		$client = session()->get('client');
-		$work-> client_id = $client->id;
+		
+		$work -> client_id = $client->id;
+
+		$client = Client::find($client->id);
+		$client -> hasWork = 1;
+		$client -> save();
 
 		$work -> save();
 
+		$work = DB::table('works')->where('title', $request->title)->orderBy('created_at', 'desc')->first();
+
+		foreach ($files as $file) {
+			$image = new Image();
+
+			$filename="img".$time.$this->__randomStr ( 3 ).'.'.$file->getClientOriginalExtension();
+
+			$file->move(base_path().'/public/img/', $filename);
+
+			$image -> image = $filename;
+			$image -> originalName = $file->getClientOriginalName();
+			$image -> work_id = $work->id;
+
+			$image -> save();
+		}
+
+
 		return redirect() -> route('admin.works.index', $client->id);
-    }
+	}
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {	
-    	
-    }
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function show($id)
+	{	
+		$image = Image::find($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-    	$work = Work::find($id);
+		return view('admin.images.show')->with('image', $image);
+	}
 
-    	return view('admin.works.edit')->with('work', $work)->with('client',session()->get('client'));
-    }
+	/**
+	 * Show the form for editing the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function edit($id)
+	{
+		$work = Work::find($id);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-    	$this -> validate($request,[
+		return view('admin.works.edit')->with('work', $work)->with('client',session()->get('client'));
+	}
+
+	public function editImg($id)
+	{
+		$image = Image::find($id);
+
+		return view('admin.images.edit')->with('image', $image);
+	}
+
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function update(Request $request, $id)
+	{
+		$this -> validate($request,[
 			'title'  =>         'required',
-			'description'	=>	'required',
-			'originalImgName'   =>    'image',
+			'description'	=>	'required'
 		]);
 
 		$work = Work::find($id);
+
 		$time = strtotime("now");
-
-		if ($request->file('originalImgName')) 
-			$file= $request->file('originalImgName');
-
-		if(!empty($file)){
-			if ($file->getClientOriginalName() != $work -> originalName) {
-				$filename="img".$time.$this->__randomStr ( 3 ).'.'.$file->getClientOriginalExtension();
-				$file->move(
-						base_path().'/public/img/', $filename
-				);
-				$work -> image = $filename;
-				$work -> originalName = $request->file('originalImgName')->getClientOriginalName();
-			}
-		}
 
 		$work -> title = $request -> title;
 		$work -> description = $request -> description;
@@ -142,24 +169,62 @@ class WorksController extends Controller
 		$work -> save();
 
 		return redirect() -> route('admin.works.index', session()->get('client'));
-    }
+	}
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-    	$work = Work::find($id);
+	public function updateImg(Request $request, $id)
+	{
+		$this -> validate($request,[
+			'originalImgName'  =>   'required|image'
+		]);
+		$image = Image::find($id);
+
+		$file = $request->file('originalImgName');
+		$time = strtotime("now");
+
+		if ($file->getClientOriginalName() != $image -> originalName) {
+			$filename="img".$time.$this->__randomStr ( 3 ).'.'.$file->getClientOriginalExtension();
+				$file->move(
+						base_path().'/public/img/', $filename
+				);
+			$image -> image = $filename;
+			$image -> originalName = $request->file('originalImgName')->getClientOriginalName();
+
+			$image->save();
+		}
+
+		return redirect() -> route('admin.clients.show', session()->get('client')->id);
+	}
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function destroy($id)
+	{
+		$work = Work::find($id);
+
+		$client = session()->get('client');
+		$client = Client::find($client->id);
+		$client -> hasWork = 0;
+		$client -> save();
 
 		$work -> delete();
 
-		return redirect() -> route('admin.works.index', session()->get('client'));
-    }
+		return redirect() -> route('admin.clients.index', session()->get('category'));
+	}
 
-    public  function __randomStr($length) {
+	public function destroyImg($id)
+	{
+		$image = Image::find($id);
+
+		$image -> delete();
+
+		return redirect() -> route('admin.clients.show', session()->get('client')->id);
+	}
+
+	public  function __randomStr($length) {
 		$str = '';
 		$chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 

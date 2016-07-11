@@ -58,11 +58,30 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as'    =>  'admin.works.index'
     ]);
 
+    Route::get('works/{id}/create', [
+        'uses'  =>  'WorksController@create',
+        'as'    =>  'admin.works.create'
+    ]);
+
     Route::get('works/{id}/destroy', [
         'uses'  =>  'WorksController@destroy',
         'as'    =>  'admin.works.destroy'
     ]);
 
+    Route::get('works/{id}/destroyI', [
+        'uses'  =>  'WorksController@destroyImg',
+        'as'    =>  'admin.works.destroyImg'
+    ]);
+
+    Route::get('works/{id}/editI', [
+        'uses'  =>  'WorksController@editImg',
+        'as'    =>  'admin.works.editImg'
+    ]);
+
+    Route::put('works/updateI/{image}', [
+        'uses'  =>  'WorksController@updateImg',
+        'as'    =>  'admin.works.updateImg'
+    ]);
 
 });
 

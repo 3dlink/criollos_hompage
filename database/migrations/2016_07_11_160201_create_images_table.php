@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWorksTable extends Migration
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,11 @@ class CreateWorksTable extends Migration
      */
     public function up()
     {
-        Schema::create('works', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('description');
-            $table->integer('client_id');
+            $table->string('image');
+            $table->string('originalName');
+            $table->integer('work_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateWorksTable extends Migration
      */
     public function down()
     {
-        Schema::drop('works');
+        Schema::drop('images');
     }
 }

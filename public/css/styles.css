@@ -560,6 +560,8 @@ header nav{
 .client-span{
 	height: 100%;
 	padding-top: 100px;
+
+	background-color: rgba(0,0,0,0.8);
 }
 
 .client-holder span{
@@ -588,9 +590,21 @@ header nav{
 .work-slogan p{
 	font-family: 'Oswald';
 	font-weight: 300;
+	padding-top: 50px;
+	text-align: center;
+	color: white;
 }
 .work-description .lines{
 	background-color: white;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.line-holder{
+	display: table-cell;
+	height: 2px;
+	width: 200px;
+	margin: 15px 7px;
 }
 
 .superponer{

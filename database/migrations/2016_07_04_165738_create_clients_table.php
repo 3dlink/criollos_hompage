@@ -17,6 +17,7 @@ class CreateClientsTable extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('originalImgName');
+            $table->boolean('hasWork');
             $table->integer('category_id');
             $table->timestamps();
         });

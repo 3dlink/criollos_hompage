@@ -9,8 +9,8 @@ class Client extends Model
     /**
      * Get the works for the category.
      */
-    public function works()
+    public function work()
     {
-        return $this->hasMany('App\Work');
+        return $this->hasOne('App\Work');
     }
 }
