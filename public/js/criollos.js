@@ -1,17 +1,4 @@
-var category;
-var work;
 $(document).ready(function(){
-	// PERKS //
-
-	var spanH = $('#portfolio-section .section-header span').height();
-	// $('#portfolio-section .section-header .lines').css('margin-top', spanH/2);
-
-	spanH = $('#service-section .section-header span').height();
-	// $('#service-section .section-header .lines').css('margin-top', spanH/2);
-
-	spanH = $('#contact-section .section-header span').height();
-	// $('#contact-section .section-header .lines').css('margin-top', spanH/2);
-
 
 	// ARROWS & X POSITION //
 	$(window).resize(function(){
@@ -86,7 +73,6 @@ $(document).ready(function(){
 	$(".category").click(function(){
 
 		var title= $(this).data('title');
-		category = title;
 		var id = $(this).data('id');
 		var description = $(this).data('description');
 
@@ -102,7 +88,7 @@ $(document).ready(function(){
 
 				loadClients(result);
 
-				$("#portfolio-section .section-header span").text(title);
+				$("#portfolio-section .section-header .section-title").text(title);
 
 				$('.client').each(function(){
 					var div = $(this);
@@ -128,7 +114,7 @@ $(document).ready(function(){
 
 				$('.close-clients').css('display','block');
 				$('.close-clients').on('click',function(){
-					$("#portfolio-section .section-header span").text('lorem ipsum dolor sit amet, consectetur');
+					$("#portfolio-section .section-header .section-title").text('Portafolio');
 
 					$(".client-slider").css({'opacity':0, 'z-index':-1});
 					$(".category-slider").css({'opacity':1, 'z-index':1});
@@ -163,25 +149,25 @@ function loadClients(clients){
 		var content = '<div class="section-content grid-100 clearfix">';
 
 		content+= '<div class="client grid-50 fleft" data-id="'+clients[i*6].id +'" data-img="';
-		content+= clients[i*6]+'">';
+		content+= clients[i*6].image+'">';
 		content+= '<div class="client-holder"><div class="client-span"><span>';
 		content+= clients[i*6].name+'</span></div></div></div>';
 		content+= '<div class="client grid-50 fright" data-id="'+clients[(i*6)+1].id +'" data-img="';
 		content+= clients[(i*6)+1].image +'">';
 		content+= '<div class="client-holder"><div class="client-span"><span>';
-		content+= clients[(i*6)+1].name+'</span></div></div>';
+		content+= clients[(i*6)+1].name+'</span></div></div></div>';
 		content+= '<div class="client grid-50 fleft" data-id="'+clients[(i*6)+2].id +'" data-img="';
 		content+= clients[(i*6)+2].image +'">';
 		content+= '<div class="client-holder"><div class="client-span"><span>';
-		content+= clients[(i*6)+2].name+'</span></div></div>';
+		content+= clients[(i*6)+2].name+'</span></div></div></div>';
 		content+= '<div class="client grid-50 fright" data-id="'+clients[(i*6)+3].id +'" data-img="';
 		content+= clients[(i*6)+3].image +'">';
 		content+= '<div class="client-holder"><div class="client-span"><span>';
-		content+= clients[(i*6)+3].name+'</span></div></div>';
+		content+= clients[(i*6)+3].name+'</span></div></div></div>';
 		content+= '<div class="client grid-50 fleft" data-id="'+clients[(i*6)+4].id +'" data-img="';
 		content+= clients[(i*6)+4].image +'">';
 		content+= '<div class="client-holder"><div class="client-span"><span>';
-		content+= clients[(i*6)+4].name+'</span></div></div>';
+		content+= clients[(i*6)+4].name+'</span></div></div></div>';
 		content+= '<div class="client grid-50 fright" data-id="'+clients[(i*6)+5].id +'" data-img="';
 		content+= clients[(i*6)+5].image +'">';
 		content+= '<div class="client-holder"><div class="client-span"><span>';
@@ -190,26 +176,28 @@ function loadClients(clients){
 		slider.append(content);
 	}
 
-	var content = '<div class="section-content grid-100 clearfix">';
+	if (remain != 0) {
+		var content = '<div class="section-content grid-100 clearfix">';
 
-	for (var i = 0; i < remain; i++) {
+		for (var i = 0; i < remain; i++) {
 
-
-
-		if (i%2 == 0) {
-			content+= '<div class="client grid-50 fleft" data-id="'+clients[i+(6*slides)].id +'" data-img="';
-			content+= clients[i+(6*slides)].image +'">';
-			content+= '<div class="client-holder"><div class="client-span"><span>';
-			content+= clients[i+(6*slides)].name+'</span></div></div></div>';
-		} else{
-			content+= '<div class="client grid-50 fright" data-id="'+clients[i+(6*slides)].id +'" data-img="';
-			content+= clients[i+(6*slides)].image +'">';
-			content+= '<div class="client-holder"><div class="client-span"><span>';
-			content+= clients[i+(6*slides)].name+'</span></div></div></div>';
+			if (i%2 == 0) {
+				content+= '<div class="client grid-50 fleft" data-id="'+clients[i+(6*slides)].id +'" data-img="';
+				content+= clients[i+(6*slides)].image +'">';
+				content+= '<div class="client-holder"><div class="client-span"><span>';
+				content+= clients[i+(6*slides)].name+'</span></div></div></div>';
+			} else{
+				content+= '<div class="client grid-50 fright" data-id="'+clients[i+(6*slides)].id +'" data-img="';
+				content+= clients[i+(6*slides)].image +'">';
+				content+= '<div class="client-holder"><div class="client-span"><span>';
+				content+= clients[i+(6*slides)].name+'</span></div></div></div>';
+			}
 		}
+
+		slider.append(content);
 	}
 
-	slider.append(content);
+
 };
 
 function clickClient(){
@@ -236,8 +224,6 @@ function clickClient(){
 
 			$('.close-works').on('click', function(){
 
-				$("#portfolio-section .section-header span").text(category);
-
 				$(".work-slider").css({'opacity':0, 'z-index':-1});
 				$(".client-slider").css({'opacity':1, 'z-index':1});
 
@@ -252,8 +238,6 @@ function clickClient(){
 				prevArrow: $(".flechaIzq-work"),
 				nextArrow: $(".flechaDer-work")
 			});
-
-			$("#portfolio-section .section-header span").text(name);
 
 			$(".client-slider").css({'opacity':0, 'z-index':-1});
 			$(".work-slider").css({'opacity':1, 'z-index':1});
@@ -285,7 +269,7 @@ function locateArrows(){
 	$('.flechaIzq-service').css('left', position.left-115);
 	$('.flechaDer-service').css('left', position.left+$('.service-slider').width()+72);
 
-	$('.flechaIzq-service, .flechaDer-service').css('top', position.top + 200);
+	$('.flechaIzq-service, .flechaDer-service').css('top', position.top+170);
 
 	position = $('.slider').position();
 	$('.flechaIzq-category, .flechaDer-category, .flechaIzq-client, .flechaDer-client').css('top', position.top+442);
@@ -295,8 +279,6 @@ function locateArrows(){
 	$('.flechaIzq-work, .flechaDer-work').css('top', position.top+272);
 
 	$('.close').css('top', position.top + 900);
-	$('.close').css('left', position.left + $('.slider').width()+ 430 - $('.close').width() -50);
+	$('.close').css('left', position.left + $('.slider').width() + $('.close').width());
 
 }
-
-

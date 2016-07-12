@@ -1,15 +1,15 @@
 /* FONTS */
 
 *::-webkit-input-placeholder {
-    color: #FFF !important;
+    color: white !important;
 }
 
-*:-moz-placeholder {
-    color: #FFF !important;
+*::-moz-placeholder {
+    color: white !important;
 }
 
-*:-ms-input-placeholder {
-    color: #FFF !important;
+*::-ms-input-placeholder {
+    color: white !important;
 }
 
 @font-face {
@@ -130,7 +130,7 @@ p{
 }
 
 .prefix-15{
-	margin-left: 15%;
+	margin-left: 15% !important;
 }
 
 .prefix-1{
@@ -305,10 +305,9 @@ header nav{
  	background-size: cover;
  	position: relative;
 
- 	/*padding-left: 280px;
- 	padding-right: 280px;*/
  	padding-bottom: 250px;
  	padding-top: 120px;
+ 	letter-spacing: 2px;
 }
 
 #service-section, #service-section .section-header .section-title,#service-section .section-header .section-slogan{
@@ -320,11 +319,11 @@ header nav{
 }
 
  #service-section .services .lines{
- 	margin-left: 104px;
+ 	/*margin-left: 104px;*/
  }
 
 .services .service-container{
-	height: 325px;
+	height: 250px;
 }
 
 .service-title{
@@ -351,8 +350,7 @@ header nav{
 	font-family: 'Oswald';
 	font-weight: 300;
 	/*font-size: 21px;*/
-	font-size: 16px;
-
+	font-size: 14px;
 	margin-top: 10px;
 }
 
@@ -403,6 +401,7 @@ header nav{
 	padding-top: 60px;
 
 	height: 1420px;
+	letter-spacing: 2px;
 }
 
 .mask{
@@ -656,6 +655,7 @@ footer{
 	padding-top: 150px;
 	position: relative;
 	height: 100%;
+	letter-spacing: 2px;
 }
 
 .contact-section .section-slogan{

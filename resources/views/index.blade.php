@@ -99,7 +99,7 @@
 					<h1 class="section-title" style="color:#494949;">Servicios</h1>
 					<div class="section-slogan">
 						<div class="lines fleft"></div>
-						<span style="color:#494949;">lorem ipsum dolor sit amet, consectetur</span>
+						<span style="color:#494949;">Nuestras esquinas</span>
 						<div class="lines fright"></div>
 					</div>
 				</header>
@@ -112,7 +112,7 @@
 				</div>
 
 				<div class="service-span">
-					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu varius augue. Etiam sodales elementum laoreet. Vestibulum eu convallis est. </span>
+					<span>Una fiolosofía de trabajo que se adapta a cualquier requerimiento</span>
 				</div>
 
 				<div class="service-slider services grid-99 clearfix">
@@ -120,7 +120,7 @@
 						<div class="service-container grid-32 fleft flipper">
 							<div class="service-info back service-style1">
 								<h3 class="service-title" style="color:white;">Branding &amp; Creativity</h3>
-								<div class="lines"></div>
+								<div class="lines prefix-15"></div>
 								<p class="service-desc">Conceptualización de ideas o imagen de marca (Aquí participan Redactores, Diseñadores, Productores y hasta Directores, ellos son los creativos de la agencia).</p>
 							</div>
 							<div class="service-img front">
@@ -131,7 +131,7 @@
 						<div class="service-container grid-32 fleft prefix-1 sufix-1 flipper">
 							<div class="service-info back service-style2">
 								<h3 class="service-title">Strategy &amp; media planning</h3>
-								<div class="lines"></div>
+								<div class="lines prefix-15"></div>
 								<p class="service-desc">Creemos en la eficiencia del presupuesto de nuestros anunciantes y desde acá planteamos conexión con el concepto creativo y los transformamos en una estrategia efectiva para la entrega del mensaje (están los númericos del equipo, planificadores y analistas, ellos son nuestros estrategas).</p>
 							</div>
 							<div class="service-img front">
@@ -142,7 +142,7 @@
 						<div class="service-container grid-32 fleft flipper">
 							<div class="service-info back service-style1">
 								<h3 class="service-title" style="color:white;">Digital Marketing &amp; analitycs</h3>
-								<div class="lines"></div>
+								<div class="lines prefix-15"></div>
 								<p class="service-desc">Acá vemos el lienzo completo del internet y damos solucion a la estrategia pero visto desde el ecosistema digital completo (Se junta lo mejor de dos mundos creatividad y estrategia + todas las plataformas digitales, este equipo vive conectado).</p>
 							</div>
 							<div class="service-img front">
@@ -155,7 +155,7 @@
 						<div class="service-container grid-32 fleft flipper">
 							<div class="service-info back service-style2">
 								<h3 class="service-title">Digital Technology</h3>
-								<div class="lines"></div>
+								<div class="lines prefix-15"></div>
 								<p class="service-desc">En esta era donde digital cobra mucho más fuerza con el tiempo, creemos que lo más importante es ir creciendo con el mismo, por eso la importancia de poder desarrollar herramientas tecnológicas que ofrezcan soluciones a nuestros inventos.</p>
 							</div>
 							<div class="service-img front">
@@ -166,7 +166,7 @@
 						<div class="service-container grid-32 fleft prefix-1 sufix-1 flipper">
 							<div class="service-info back service-style1">
 								<h3 class="service-title" style="color:white;">intelligence insight</h3>
-								<div class="lines"></div>
+								<div class="lines prefix-15"></div>
 								<p class="service-desc">Ninguna idea puede cobrar vida sin antes haber sido investigada o estudiada (No son ratones de biblioteca o los hermanos perdidos de Google, pero este equipo sabe todo acerca del consumidor).</p>
 							</div>
 							<div class="service-img front">
@@ -177,7 +177,7 @@
 						<div class="service-container grid-32 fleft flipper">
 							<div class="service-info back service-style2">
 								<h3 class="service-title" >live experience</h3>
-								<div class="lines"></div>
+								<div class="lines prefix-15"></div>
 								<p class="service-desc">Lograr que nuestrar idean sean memorables para el consumidor es lo más importante. (Está es nuestra gente guerrera, este equipo esta prepaador para producir eventos en tiempo record, desde productores, carpinteros hasta promotoras).</p>
 							</div>
 							<div class="service-img front">
@@ -312,6 +312,21 @@
 					</div>
 
 					<div class="client-slider grid-100 superponer" style="position:absolute;">
+<!-- 						<div style="background-image: url(&quot;img/img1467668443WOB.png&quot;);" class="client grid-50 fleft" data-id="1" data-img="img1467668443WOB.png">
+							<div class="client-holder">
+								<div style="display: block;" class="client-span">
+									<span>Mitsubishi</span>
+								</div>
+							</div>
+						</div>
+
+						<div style="background-image: url(&quot;img/img1467730433RN8.png&quot;);" class="client grid-50 fright" data-id="2" data-img="img1467730433RN8.png">
+							<div class="client-holder">
+								<div style="display: block;" class="client-span">
+									<span>CocaCola</span>
+								</div>
+							</div>
+						</div> -->
 					</div>
 
 					<div class="work-slider grid-100 superponer" style="position:absolute;">
@@ -365,7 +380,7 @@
 							</div>
 
 							<div class="formSend fright">
-								<span>enviar</span>
+								<span style="letter-spacing: 0px;">enviar</span>
 								<input id="send-btn" class="send-btn" name="send-btn" value="Send" type="submit">
 							</div>
 
@@ -378,7 +393,7 @@
 						</form>
 					</div>
 					<div class="info grid-40 fright">
-						<h2>¿dónde estamos?</h2>
+						<h2 style="letter-spacing: 3px;">¿dónde estamos?</h2>
 						<div class="lines"></div>
 						<div>
 							<ul>
