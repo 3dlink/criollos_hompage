@@ -180,13 +180,6 @@ header nav{
 	color: white;
 }
 
-#home-section{
-	/*background-image: url("../img/home.png");
- 	background-size: cover;
-
- 	height: 900px;*/
-}
-
 #home-section img{
 	width: 100%;
 }
@@ -194,6 +187,14 @@ header nav{
 .clients-section{
     width: 100%;
     padding: 30px 150px 80px;
+}
+
+span.section-title{
+	font-size: 60px;
+	
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(253, 190, 16);
 }
 
 #nosotros-section{

@@ -194,7 +194,7 @@
 	<div class="clearfix">
 		<section id="clients-section" class="clients-section fleft">
 			<header class="section-header">
-				<h1 class="section-title" style="color:#fdbe10;text-decoration:underline;letter-spacing: 2px;">Clientes</h1>
+				<h1 class="section-title" style="color:#fdbe10;letter-spacing: 2px;"><span class="section-title">Clientes</span></h1>
 			</header>
 
 			<slick infinite="true" speed="1000" slides-to-show="1" slides-to-scroll="1">
@@ -312,21 +312,6 @@
 					</div>
 
 					<div class="client-slider grid-100 superponer" style="position:absolute;">
-<!-- 						<div style="background-image: url(&quot;img/img1467668443WOB.png&quot;);" class="client grid-50 fleft" data-id="1" data-img="img1467668443WOB.png">
-							<div class="client-holder">
-								<div style="display: block;" class="client-span">
-									<span>Mitsubishi</span>
-								</div>
-							</div>
-						</div>
-
-						<div style="background-image: url(&quot;img/img1467730433RN8.png&quot;);" class="client grid-50 fright" data-id="2" data-img="img1467730433RN8.png">
-							<div class="client-holder">
-								<div style="display: block;" class="client-span">
-									<span>CocaCola</span>
-								</div>
-							</div>
-						</div> -->
 					</div>
 
 					<div class="work-slider grid-100 superponer" style="position:absolute;">

@@ -278,7 +278,7 @@ function locateArrows(){
 
 	$('.flechaIzq-work, .flechaDer-work').css('top', position.top+272);
 
-	$('.close').css('top', position.top + 900);
-	$('.close').css('left', position.left + $('.slider').width() + $('.close').width());
+	$('.close').css('top', position.top + 1000);
+	$('.close').css('left', position.left + $('.slider').width() + $('.close').width()/2);
 
 }
