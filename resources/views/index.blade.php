@@ -279,7 +279,7 @@
 							<div id="category3" class="category grid-50 fleft" data-id="3" data-title="digital marketing &amp; analytics">
 								<h3 style="margin-top:16px;">digital marketing &amp; analytics</h3>
 							</div>
-							<div class="category-info category-info-2 grid-50 fright">
+							<div class="category-info category-info-2 grid-50 fright" style="background-image:url('img/IMAGEN ESTRATEGIA.png');">
 								<div class="mask"></div>
 							</div>
 						</div>
@@ -301,7 +301,7 @@
 								<div class="mask"></div>
 							</div>
 
-							<div class="category-info category-info-5 grid-50 fleft">
+							<div class="category-info category-info-5 grid-50 fleft" style="background-image:url('img/imagen intelligence.png');">
 								<div class="mask"></div>
 							</div>
 
