@@ -1,21 +1,21 @@
 /* FONTS */
 
 *::-webkit-input-placeholder {
-    color: white !important;
+	color: white !important;
 }
 
 *::-moz-placeholder {
-    color: white !important;
+	color: white !important;
 }
 
 *::-ms-input-placeholder {
-    color: white !important;
+	color: white !important;
 }
 
 @font-face {
-    font-family: 'BebasNeue';
-    src: url('fonts/BebasNeue.otf') format("opentype");
-    font-weight: 400;
+	font-family: 'BebasNeue';
+	src: url('fonts/BebasNeue.otf') format("opentype");
+	font-weight: 400;
 }
 
 @font-face{
@@ -86,11 +86,11 @@ p{
 }
 
 .clearfix:after {
-   content: " ";
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+	content: " ";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
 }
 
 .grid-99{
@@ -185,8 +185,8 @@ header nav{
 }
 
 .clients-section{
-    width: 100%;
-    padding: 30px 150px 80px;
+	width: 100%;
+	padding: 30px 150px 80px;
 }
 
 span.section-title{
@@ -199,7 +199,7 @@ span.section-title{
 
 #nosotros-section{
 	background-color: #fff;
-  position: relative;
+	position: relative;
 }
 
 .nosotros_content p span{
@@ -213,61 +213,61 @@ span.section-title{
 }
 
 .white{
-  background: none repeat scroll 0 0 white;
+	background: none repeat scroll 0 0 white;
 }
 
 .grey{
-  background: none repeat scroll 0 0 #303030;
+	background: none repeat scroll 0 0 #303030;
 }
 
 .orange{
-  background: none repeat scroll 0 0 #f4b30f;
+	background: none repeat scroll 0 0 #f4b30f;
 }
 
 .diagonal_r {
-  top: -40px;
-  height: 75px;
-  left: -5%;
-  position: absolute;
-  transform: rotate(-2deg);
-  width: 108%;
-  z-index: 3;
+	top: -40px;
+	height: 75px;
+	left: -5%;
+	position: absolute;
+	transform: rotate(-2deg);
+	width: 108%;
+	z-index: 3;
 }
 
 .diagonal_l {
-  bottom: -26px;
-  height: 102px;
-  left: -5%;
-  position: absolute;
-  transform: rotate(2deg);
-  width: 108%;
-  z-index: 3;
+	bottom: -26px;
+	height: 102px;
+	left: -5%;
+	position: absolute;
+	transform: rotate(2deg);
+	width: 108%;
+	z-index: 3;
 }
 
 .diagonal_r_bottom {
-    bottom: -90px;
-    height: 160px;
-  left: -5%;
-  position: absolute;
-  transform: rotate(-2deg);
-  width: 108%;
-  z-index: 3;
+	bottom: -90px;
+	height: 160px;
+	left: -5%;
+	position: absolute;
+	transform: rotate(-2deg);
+	width: 108%;
+	z-index: 3;
 }
 
 .diagonal_r_top {
-    top: -60px;
-    height: 150px;
-  left: -5%;
-  position: absolute;
-  transform: rotate(2deg);
-  width: 108%;
-  z-index: 3;
+	top: -50px;
+	height: 90px;
+	left: -5%;
+	position: absolute;
+	transform: rotate(2deg);
+	width: 108%;
+	z-index: 3;
 }
 
 .section_content {
-  width: 100%;
-  color: black;
-  position: relative;
+	width: 100%;
+	color: black;
+	position: relative;
 }
 
 .nosotros_content {
@@ -276,12 +276,12 @@ span.section-title{
 }
 
 .nosotros-items{
-  width: 100%;
-      margin: 50px 0;
+	width: 100%;
+	margin: 50px 0;
 }
 
 .img-nosotros{
-	    padding-top: 20px;
+	padding-top: 20px;
 }
 
 .nosotros-items img{
@@ -303,12 +303,12 @@ span.section-title{
 
 #service-section{
 	background-image: url("../img/bg-servicio.png");
- 	background-size: cover;
- 	position: relative;
+	background-size: cover;
+	position: relative;
 
- 	padding-bottom: 250px;
- 	padding-top: 120px;
- 	letter-spacing: 2px;
+	padding-bottom: 250px;
+	padding-top: 120px;
+	letter-spacing: 2px;
 }
 
 #service-section, #service-section .section-header .section-title,#service-section .section-header .section-slogan{
@@ -319,9 +319,9 @@ span.section-title{
 	background-color: #494949;
 }
 
- #service-section .services .lines{
- 	/*margin-left: 104px;*/
- }
+#service-section .services .lines{
+	/*margin-left: 104px;*/
+}
 
 .services .service-container{
 	height: 250px;
@@ -349,9 +349,10 @@ span.section-title{
 
 .service-desc{
 	font-family: 'Oswald';
-	font-weight: 300;
-	/*font-size: 21px;*/
-	font-size: 14px;
+	font-weight: 100;
+	line-height: 16px;
+	text-align: center;
+	font-size: 16px;
 	margin-top: 10px;
 }
 
@@ -481,7 +482,7 @@ span.section-title{
 .lines{
 	height: 2px;
 	width: 200px;
-    margin: 15px 7px;
+	margin: 15px 7px;
 	background-color: rgb(253,190,16);
 }
 
@@ -497,12 +498,12 @@ span.section-title{
 }
 
 .slider{
-  perspective: 1000px;
+	perspective: 1000px;
 	position: relative;
 }
 
 .client-slider{
-  transform: rotateY(-3.5deg) !important;
+	transform: rotateY(-3.5deg) !important;
 }
 
 
@@ -516,7 +517,7 @@ span.section-title{
 }
 
 .category-slider{
-  transform: rotateY(-3.5deg) !important;
+	transform: rotateY(-3.5deg) !important;
 	opacity: 1;
 	z-index: 1;
 }
@@ -554,7 +555,7 @@ span.section-title{
 .client{
 	background-color: black;
 	color: white;
-  background-size: cover;
+	background-size: cover;
 
 }
 
@@ -662,11 +663,11 @@ footer{
 }
 #contact-section{
 /*	padding-left: 365px;
-	padding-right: 365px;*/
-	padding-top: 150px;
-	position: relative;
-	height: 100%;
-	letter-spacing: 2px;
+padding-right: 365px;*/
+padding-top: 30px;
+position: relative;
+height: 100%;
+letter-spacing: 2px;
 }
 
 .contact-section .section-slogan{
@@ -720,28 +721,28 @@ footer{
 }
 
 .formSend {
-    position: relative;
-    overflow: hidden;
-    margin: -3px 10px 0px 5px;
-    color: #f4b812;
+	position: relative;
+	overflow: hidden;
+	margin: -3px 10px 0px 5px;
+	color: #f4b812;
 
-    font-weight: 300;
+	font-weight: 300;
 }
 
 .formSend span{
-    font-size: 39px;
+	font-size: 39px;
 }
 .formSend input.send-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    margin-top: -2px;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	margin-top: -2px;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
 }
 
 #contact-section .contact .lines{
@@ -758,7 +759,7 @@ footer{
 }
 
 .contact .info h2, .correo{
-  font-style: italic;
+	font-style: italic;
 	text-transform: uppercase;
 	font-family: 'Oswald';
 	font-weight: 400;

@@ -263,7 +263,7 @@
 					<div class="category-slider">
 						<div class="section-content grid-100 clearfix">
 							<div id="category1" class="category grid-50 fleft" data-id="1" data-title="Branding &amp; creativity">
-								<h3>Branding &amp; Creativity</h3>
+								<h3 style="padding-top: 7px;">Branding &amp; Creativity</h3>
 							</div>
 							<div class="category-info category-info-1 grid-50 fright" style="background-image:url('img/salsa.png');">
 								<div class="mask"></div>
@@ -273,11 +273,11 @@
 								<div class="mask"></div>
 							</div>
 							<div id="category2" class="category grid-50 fright" data-id="2" data-title="Strategy &amp; media planning">
-								<h3>Strategy &amp; media planning</h3>
+								<h3 style="padding-top: 2px;">Strategy &amp; media planning</h3>
 							</div>
 
 							<div id="category3" class="category grid-50 fleft" data-id="3" data-title="digital marketing &amp; analytics">
-								<h3>digital marketing &amp; analytics</h3>
+								<h3 style="margin-top:16px;">digital marketing &amp; analytics</h3>
 							</div>
 							<div class="category-info category-info-2 grid-50 fright">
 								<div class="mask"></div>
@@ -291,7 +291,7 @@
 								<div class="mask"></div>
 							</div>
 							<div id="category4" class="category grid-50 fright" data-id="4" data-title="digital technology">
-								<h3>digital technology</h3>
+								<h3 style="padding-top: 17px;">digital technology</h3>
 							</div>
 
 							<div id="category5" class="category grid-50 fleft" data-id="5" data-title="intelligence insight">
