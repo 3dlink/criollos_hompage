@@ -20,6 +20,11 @@ Route::post('contact', [
     'uses'  =>  'mainController@contact'
 ]);
 
+Route::post('cv', [
+    'uses'  =>  'mainController@cv',
+    'as'    =>  'cv'
+]);
+
 Route::get('/clients/{id}', [
     'uses'  =>  'ClientsController@get'
 ]);
@@ -81,6 +86,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::put('works/updateI/{image}', [
         'uses'  =>  'WorksController@updateImg',
         'as'    =>  'admin.works.updateImg'
+    ]);
+
+    Route::resource('quotes', 'QuotesController');
+
+    Route::get('quotes/{id}/destroy', [
+        'uses'  =>  'QuotesController@destroy',
+        'as'    =>  'admin.quotes.destroy'
     ]);
 
 });

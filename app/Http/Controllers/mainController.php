@@ -8,13 +8,15 @@ use App\Http\Requests;
 use App\Category;
 use App\Client;
 use App\Work;
+use App\Quote;
 use Validator;
 use Mail;
 
 class mainController extends Controller
 {
 	public function index(){
-		return view('index');
+		$quotes = Quote::all();
+		return view('index')->with('quotes', $quotes);
 	}
 
 	public function contact (Request $request){
@@ -49,5 +51,36 @@ class mainController extends Controller
 
 		$request->session()->flash('mail','Email has been sent!');
 		return redirect('/#contact-section');
+	}
+
+	public function cv (Request $request){
+
+		$validator = Validator::make($request->all(), [
+			'cv' => 'required|mimes:pdf'
+			]);
+
+		if ($validator->fails()) {
+			return redirect("/#trabajo-section")
+			->withErrors($validator);
+		}
+		$path = $request->cv->getRealPath();
+		$name = $request->cv->getClientOriginalName();
+		$mime = $request->cv->getMimeType();
+
+		$sent= Mail::send('mail.cv', array('cv' => 'Nuevo CV/Portafolio'), function ($m) use ($path, $name, $mime){
+			$m->to("o0serras0o@gmail.com");
+			$m->subject("Trabajo");
+			$m->attach($path, array(
+				'as' => $name, 
+				'mime' => $mime));
+		});
+
+		if (!$sent) {
+			$request->session()->flash('cv','CV no pudo ser enviado. Intente nuevamente!');
+			return redirect('/#trabajo-section');
+		}
+
+		$request->session()->flash('cv','CV ha sido enviado!');
+		return redirect('/#trabajo-section');
 	}
 }

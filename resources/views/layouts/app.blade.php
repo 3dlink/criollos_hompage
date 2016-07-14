@@ -58,6 +58,16 @@
                                 <li><a href="{{ route('admin.clients.index', 6) }}">Live Experience </a></li>
                             </ul>
                         </li>
+
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                View <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('admin.quotes.index') }}">Quotes </a></li>
+                            </ul>
+                        </li>
                     </li>
                     @endif
                 </ul>
@@ -95,7 +105,6 @@
         {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 
         <script src="https://use.fontawesome.com/011b552131.js"></script>
-        <script src="{{URL::asset('js/iconPicker/js/fontawesome-iconpicker.js')}}"></script>
 
 
     <script type="text/javascript">

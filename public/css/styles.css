@@ -244,6 +244,16 @@ span.section-title{
 	z-index: 3;
 }
 
+.diagonal_l_top {
+	top: -20px;
+	height: 95px;
+	left: -5%;
+	position: absolute;
+	transform: rotate(-2deg);
+	width: 108%;
+	z-index: 3;
+}
+
 .diagonal_r_bottom {
 	bottom: -90px;
 	height: 160px;
@@ -301,13 +311,52 @@ span.section-title{
 	background-position: 50%;
 }
 
+#quote-section{
+	height: 420px;
+	background-image: url("../img/FOTO FONDO QUOTE.png");
+	background-size: cover;
+
+	position: relative;
+}
+
+#quote-section .mask{
+	background-color: rgba(0,0,0,0.5);
+	padding: 150px 200px;
+}
+
+.quote-holder{
+	text-align: center;
+	position: relative;
+
+	padding: 10px;
+}
+
+.quote{
+	font-family: 'Oswald';
+	font-size: 46px;
+	font-weight: 300;
+	line-height: 1;
+
+	padding: 10px;
+
+	color: white;
+}
+
+.comilla{
+	position: relative;
+}
+
+.comilla img{
+	position: absolute;
+}
+
 #service-section{
 	background-image: url("../img/bg-servicio.png");
 	background-size: cover;
 	position: relative;
 
 	padding-bottom: 250px;
-	padding-top: 120px;
+	padding-top: 25px;
 	letter-spacing: 2px;
 }
 
@@ -329,6 +378,7 @@ span.section-title{
 
 .service-title{
 	margin-bottom: 10px;
+	font-size: 22px;
 }
 
 .service-span{
@@ -352,7 +402,7 @@ span.section-title{
 	font-weight: 100;
 	line-height: 16px;
 	text-align: center;
-	font-size: 16px;
+	font-size: 13px;
 	margin-top: 10px;
 }
 
@@ -647,10 +697,95 @@ span.section-title{
 	z-index: -1;
 }
 
+/* CV Section */
+
+.trabajo-section{
+	width: 100%;
+	padding: 30px 150px 80px;
+
+	background-image: url('../img/FONDO TRABAJO.png');
+	background-size: cover;
+
+	position: relative;
+}
+
+#trabajo-section .section-title span{
+	color: #494949;
+}
+
+.trabajo-span{
+	font-size: 80px;
+	letter-spacing: 2px;
+}
+
+.trabajo-1{
+	color: #fdbe10;
+	margin-bottom: 0;
+}
+
+.trabajo-2{
+	margin-top: 0;
+	color: #303030;
+	font-weight: 300;
+}
+
+.adjunta{
+	font-family: 'Oswald';
+	font-size: 25px;
+	color: #fdbe10;
+	letter-spacing: 2px;
+}
+
+#cvUpload{
+	border-width: 0;
+	background-color: #828282;
+	color: #ffffff;
+
+	padding: 5px 15px;
+	width: 100%;
+
+	font-family: 'Oswald';
+	font-weight: 100;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+#cvUpload:hover{
+	cursor: text;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: -3px 10px 0px 5px;
+
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    margin-top: -2px;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+    width: 100%;
+}
+
+.uploadSpan{
+	width: 33%;
+	display: initial;
+}
+
 
 /* CONTACT SECTION */
 footer{
-	background-image: url("../img/bg-contacto.png");
+	background-image: url("../img/bg-contacto-original.png");
 	background-size: cover;
 
 	padding-bottom: 65px;
@@ -664,7 +799,7 @@ footer{
 #contact-section{
 /*	padding-left: 365px;
 padding-right: 365px;*/
-padding-top: 30px;
+padding-top: 50px;
 position: relative;
 height: 100%;
 letter-spacing: 2px;
@@ -822,5 +957,5 @@ letter-spacing: 2px;
 .success-message{
 	font-size: 20px;
 	letter-spacing: 1px;
-	color: white;
+	color: red;
 }

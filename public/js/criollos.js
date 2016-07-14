@@ -15,6 +15,13 @@ $(document).ready(function(){
 
 	// SLIDERS //
 
+	$(".quote-slider").slick({
+		draggable: false,
+		arrows: false,
+		autoplay: true,
+		speed: 500,
+		autoplaySpeed: 5000
+	});
 	$(".service-slider").slick({
 		draggable: false,
 		prevArrow: $(".flechaIzq-service"),
@@ -76,7 +83,7 @@ $(document).ready(function(){
 		var id = $(this).data('id');
 		var description = $(this).data('description');
 
-		var uri = 'clients/'+id;
+		var uri = 'public/clients/'+id;
 
 		$(".client-slider").slick('unslick');
 
@@ -134,6 +141,12 @@ $(document).ready(function(){
 				$(".client-slider").css({'opacity':1, 'z-index':1});
 			}
 		});
+	});
+
+	$("#cv").change(function(){
+		$("#cvUpload").val($(this).val());
+
+		$('#cvSubmit').click();
 	});
 
 });
@@ -203,7 +216,7 @@ function loadClients(clients){
 function clickClient(){
 	var id = $(this).data('id');
 	var name = $(this).children().children().text();
-	var uri = 'works/'+id;
+	var uri = 'public/works/'+id;
 
 	$(".work-slider .w-slider").slick('unslick');
 
@@ -281,4 +294,16 @@ function locateArrows(){
 	$('.close').css('top', position.top + 1000);
 	$('.close').css('left', position.left + $('.slider').width() + $('.close').width()/2);
 
+
+	$('.quote-holder').each(function(){
+		position = $(this).children('.quote').position();
+		var c = $(this).children().children('.comilla');
+
+		c.children('.comillaIzq').css('top', position.top- c.height());
+
+		c.children('.comillaIzq').css('left', c.children('.comillaIzq').width()/4 * -1);
+		c.children('.comillaDer').css('left', ( c.children('.comillaDer').width() * 3) / 4 * -1);
+	});
+
+	$('.upload').css('left', $('#cvUpload').position().left);
 }
