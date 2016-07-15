@@ -1,4 +1,16 @@
+	$(document).scroll(function(){
+		if($('.nosotros_content').is_on_screen()){
+	        console.log('sirve 2');
+        	$('.dots_criollos').addClass('animacion');
+    	}
+    });
+
 $(document).ready(function(){
+
+
+		if($('.nosotros_content').is_on_screen()){
+      $('.dots_criollos').addClass('animacion');
+  	}
 
 	// ARROWS & X POSITION //
 	$(window).resize(function(){
@@ -14,6 +26,13 @@ $(document).ready(function(){
 	});
 
 	// SLIDERS //
+	$(".category-slider33").slick({
+		autoplay:true,
+		autoplaySpeed: 5000,
+		draggable: true,
+		prevArrow: $(".flechaIzq-category2"),
+		nextArrow: $(".flechaDer-category2")
+	});
 
 	$(".quote-slider").slick({
 		draggable: false,
@@ -83,7 +102,7 @@ $(document).ready(function(){
 		var id = $(this).data('id');
 		var description = $(this).data('description');
 
-		var uri = 'public/clients/'+id;
+		var uri = 'clients/'+id;
 
 		$(".client-slider").slick('unslick');
 
@@ -207,6 +226,16 @@ function loadClients(clients){
 			}
 		}
 
+		for (var i = remain; i < 6; i++) {
+			if (i%2 == 0) {
+				content+= '<div class="client grid-50 fleft">';
+				content+= '<div class="client-holder"><div class="client-span"><span></span></div></div></div>';
+			} else{
+				content+= '<div class="client grid-50 fright">';
+				content+= '<div class="client-holder"><div class="client-span"><span></span></div></div></div>';
+			}
+		};
+
 		slider.append(content);
 	}
 
@@ -216,7 +245,7 @@ function loadClients(clients){
 function clickClient(){
 	var id = $(this).data('id');
 	var name = $(this).children().children().text();
-	var uri = 'public/works/'+id;
+	var uri = 'works/'+id;
 
 	$(".work-slider .w-slider").slick('unslick');
 
@@ -267,7 +296,7 @@ function loadWorks(work){
 
 	for (var i = 0; i < work.images.length; i++) {
 		var content = '<div class="section-content grid-100 clearfix">';
-		content+= '<div class="work-img"><img src="img/';
+		content+= '<div class="work-img"><img src="public/img/';
 		content+= work.images[i].image;
 		content+= '"></div>';
 		content+= '</div>';
@@ -285,9 +314,9 @@ function locateArrows(){
 	$('.flechaIzq-service, .flechaDer-service').css('top', position.top+170);
 
 	position = $('.slider').position();
-	$('.flechaIzq-category, .flechaDer-category, .flechaIzq-client, .flechaDer-client').css('top', position.top+442);
+	$('.flechaIzq-category, .flechaDer-category, .flechaIzq-client, .flechaDer-client').css('top', position.top+520);
 	$('.flechaIzq-category, .flechaIzq-client, .flechaIzq-work').css('left', position.left-137);
-	$('.flechaDer-category, .flechaDer-client, .flechaDer-work').css('left', position.left+$('.slider').width()+85);
+	$('.flechaDer-category, .flechaDer-client, .flechaDer-work').css('left', position.left+ $('.slider').width()+85);
 
 	$('.flechaIzq-work, .flechaDer-work').css('top', position.top+272);
 

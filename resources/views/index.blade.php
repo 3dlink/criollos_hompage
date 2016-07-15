@@ -11,11 +11,8 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/styles.css')}}">
-	<!-- public/ -->
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('js/slick/slick.css')}}">
-	<!-- public/ -->
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/animate.css')}}">
-	<!-- public/ -->
 
 
 </head>
@@ -38,7 +35,6 @@
 
 					<a target="_blank" onclick="$('body').scrollTo('#home-section',1000);">
 						<img src="img/CRIOLLOS FULL AGENCY.png">
-						<!-- public/ -->
 					</a>
 				</div>
 
@@ -58,7 +54,6 @@
 
 	<div id="home-section" class="home-section clearfix">
 		<img src="img/home.png">
-		<!-- public/ -->
 	</div>
 
 	<div class="clearfix">
@@ -74,28 +69,22 @@
 							<div class="lines fright"></div>
 						</div>
 					</header>
-					<p>Sómos la representación de la pasión profecional por lo que hacemos. Pues de ella se desprende nuestra inquietante curiosidad por re-inventar nuestras ideas en este proceso que llamámos <span>colando el café perfecto.</span>
+					<p>Sómos la representación de la pasión profesional por lo que hacemos. Pues de ella se desprende nuestra inquietante curiosidad por re-inventar nuestras ideas en este proceso que llamámos <span>colando el café perfecto.</span>
 						<br><br>
-						<span>We are a Full Service Agency,</span> y hemos enfocado nuestros esfuerzos en convertinos en una agencia qué mas allá de un nombre, hoy comparte una filosofía y con ello un portapholio de opciones comunicacionales integrales para nuestros clientes.
+						<span>We are a Full Service Agency,</span> y hemos enfocado nuestros esfuerzos en convertinos en una agencia qué mas allá de un nombre, hoy comparte una filosofía y con ello un portafolio de opciones comunicacionales integrales para nuestros clientes.
 					</p>
 
-					<div class="nosotros-items fleft">
-						<img src="img/1.png" class="animated">
-						<!-- public/ -->
-						<img src="img/2.png" class="animated">
-						<!-- public/ -->
-						<img src="img/3.png" class="animated">
-						<!-- public/ -->
-						<img src="img/4.png" class="animated">
-						<!-- public/ -->
-						<img src="img/5.png" class="animated item-peque">
-						<!-- public/ -->
-					</div>
+					<ul class="nosotros-items fleft" style="list-style-type: none;padding: 0;">
+						<li><img id="dot1" src='{{URL::asset("img/1.png")}}' class="dots_criollos"></li>
+						<li><img id="dot2" src='{{URL::asset("img/2.png")}}' class="dots_criollos"></li>
+						<li><img id="dot3" src='{{URL::asset("img/3.png")}}' class="dots_criollos"></li>
+						<li><img id="dot4" src='{{URL::asset("img/4.png")}}' class="dots_criollos"></li>
+						<li><img id="dot5" src='{{URL::asset("img/5.png")}}' class="dots_criollos item-peque"></li>
+					</ul>
 
 				</div>
 				<div class="grid-30 fleft img-nosotros">
 					<img src="img/LOGO.png" class="fleft">
-					<!-- public/ -->
 				</div>
 			</div>
 			<!-- <div class="diagonal_l white"></div> -->
@@ -111,10 +100,10 @@
 					<div class="quote-holder">						
 						<span class="quote">
 							<div class="comilla fleft"><img class="comillaIzq" src="img/comilla1.png"></div>
-							<!-- public/ -->
+							<!--  -->
 							{{$quote->quote}}
 							<div class="comilla fright"><img class="comillaDer" src="img/comilla2.png"></div>
-							<!-- public/ -->
+							<!--  -->
 						</span>
 					</div>
 					@endforeach
@@ -131,19 +120,17 @@
 				<header class="section-header">
 					<h1 class="section-title" style="color:#494949;">Servicios</h1>
 					<div class="section-slogan">
-						<div class="lines fleft"></div>
+						<div style="width:310px;" class="lines fleft"></div>
 						<span style="color:#494949;">Nuestras esquinas</span>
-						<div class="lines fright"></div>
+						<div style="width:310px;" class="lines fright"></div>
 					</div>
 				</header>
 
 				<div class="flechaIzq flechaIzq-service">
 					<img src="{{URL::asset('img/FLECHA 1.png')}}">
-					<!-- public/ -->
 				</div>
 				<div class="flechaDer flechaDer-service">
 					<img src="{{URL::asset('img/FLECHA 2.png')}}">
-					<!-- public/ -->
 				</div>
 
 				<div class="service-span">
@@ -156,11 +143,10 @@
 							<div class="service-info back service-style1">
 								<h3 class="service-title" style="color:white;">Branding &amp; Creativity</h3>
 								<div class="lines prefix-15"></div>
-								<p class="service-desc" style="color:white;">Conceptualización de ideas o imagen de marca (Aquí participan Redactores, Diseñadores, Productores y hasta Directores, ellos son los creativos de la agencia).</p>
+								<p class="service-desc">Conceptualización de ideas o imagen de marca (Aquí participan Redactores, Diseñadores, Productores y hasta Directores, ellos son los creativos de la agencia).</p>
 							</div>
 							<div class="service-img front">
 								<img src="img/BOTON CREATIVIDAD.png">
-								<!-- public/ -->
 							</div>
 						</div>
 
@@ -172,7 +158,6 @@
 							</div>
 							<div class="service-img front">
 								<img src="img/BOTON ESTRATEGIA1.png">
-								<!-- public/ -->
 							</div>
 						</div>
 
@@ -180,11 +165,10 @@
 							<div class="service-info back service-style1">
 								<h3 class="service-title" style="color:white;">Digital Marketing &amp; analitycs</h3>
 								<div class="lines prefix-15"></div>
-								<p class="service-desc" style="color:white;">Acá vemos el lienzo completo del internet y damos solucion a la estrategia pero visto desde el ecosistema digital completo (Se junta lo mejor de dos mundos creatividad y estrategia + todas las plataformas digitales, este equipo vive conectado).</p>
+								<p class="service-desc">Acá vemos el lienzo completo del internet y damos solucion a la estrategia pero visto desde el ecosistema digital completo (Se junta lo mejor de dos mundos creatividad y estrategia + todas las plataformas digitales, este equipo vive conectado).</p>
 							</div>
 							<div class="service-img front">
 								<img src="img/BOTON DIGITAL MEDIA.png">
-								<!-- public/ -->
 							</div>
 						</div>
 					</div>
@@ -198,7 +182,6 @@
 							</div>
 							<div class="service-img front">
 								<img src="img/BOTON DIGITAL TECH1.png">
-								<!-- public/ -->
 							</div>
 						</div>
 
@@ -206,11 +189,10 @@
 							<div class="service-info back service-style1">
 								<h3 class="service-title" style="color:white;">intelligence insight</h3>
 								<div class="lines prefix-15"></div>
-								<p class="service-desc" style="color:white;">Ninguna idea puede cobrar vida sin antes haber sido investigada o estudiada (No son ratones de biblioteca o los hermanos perdidos de Google, pero este equipo sabe todo acerca del consumidor).</p>
+								<p class="service-desc">Ninguna idea puede cobrar vida sin antes haber sido investigada o estudiada (No son ratones de biblioteca o los hermanos perdidos de Google, pero este equipo sabe todo acerca del consumidor).</p>
 							</div>
 							<div class="service-img front">
 								<img src="img/BOTON INTELLIGENCE IN.png">
-								<!-- public/ -->
 							</div>
 						</div>
 
@@ -222,7 +204,6 @@
 							</div>
 							<div class="service-img front">
 								<img src="img/BOTON LIVE EX.png">
-								<!-- public/ -->
 							</div>
 						</div>
 
@@ -233,308 +214,311 @@
 	</div>
 
 	<div class="clearfix">
-		<section id="clients-section" class="clients-section fleft">
-			<header class="section-header">
-				<h1 class="section-title" style="color:#fdbe10;letter-spacing: 2px;"><span class="section-title">Clientes</span></h1>
-			</header>
-
-			<slick infinite="true" speed="1000" slides-to-show="1" slides-to-scroll="1">
-				<div>
-					<div class="cliente fleft" style="background-image:url('img/c1.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c2.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c3.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c4.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c5.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c6.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c7.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c8.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c9.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c10.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c11.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c12.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c13.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c14.png');"></div>
-					<!-- public/ -->
-					<div class="cliente fleft" style="background-image:url('img/c15.png');"></div>
-					<!-- public/ -->
-				</div>
-			</slick>
-		</section>
-	</div>
-
-	<div class="clearfix">
-		<section id="portfolio-section" class="portfolio-section">
+		<section style="position:relative;" id="clients-section" class="clients-section fleft">
 			<div class="section-container grid-100">
 				<header class="section-header">
-					<h1 class="section-title">portafolio</h1>
-					<div class="section-slogan">
-						<div class="lines fleft"></div>
-						<span>UNA MUESTRA DE LO QUE HEMOS HECHO</span>
-						<div class="lines fright"></div>
-					</div>
+					<h1 class="section-title" style="color:#fdbe10;letter-spacing: 2px;"><span class="section-title">Clientes</span></h1>
 				</header>
 
-				<div class="flechaIzq flechaIzq-category">
+<!-- 
+				<div class="flechaIzq flechaIzq-category2">
 					<img src="{{URL::asset('img/flecha1.png')}}">
-					<!-- public/ -->
 				</div>
-				<div class="flechaDer flechaDer-category">
+				<div class="flechaDer flechaDer-category2">
 					<img src="{{URL::asset('img/flecha2.png')}}">
-					<!-- public/ -->
 				</div>
+			-->
 
-				<div class="flechaIzq flechaIzq-client hidden">
-					<img src="{{URL::asset('img/flecha1.png')}}">
-					<!-- public/ -->
-				</div>
-				<div class="flechaDer flechaDer-client hidden">
-					<img src="{{URL::asset('img/flecha2.png')}}">
-					<!-- public/ -->
-				</div>
-
-				<div class="flechaIzq flechaIzq-work hidden">
-					<img src="{{URL::asset('img/flecha1.png')}}">
-					<!-- public/ -->
-				</div>
-				<div class="flechaDer flechaDer-work hidden">
-					<img src="{{URL::asset('img/flecha2.png')}}">
-					<!-- public/ -->
-				</div>
-
-				<div class="close close-clients">
-					<img src="{{URL::asset('img/X.png')}}">
-					<!-- public/ -->
-				</div>
-				<div class="close close-works">
-					<img src="{{URL::asset('img/X.png')}}">
-					<!-- public/ -->
-				</div>
-
-				<div class="slider">
-					<div class="category-slider">
-						<div class="section-content grid-100 clearfix">
-							<div id="category1" class="category grid-50 fleft" data-id="1" data-title="Branding &amp; creativity">
-								<h3 style="padding-top: 7px;">Branding &amp; Creativity</h3>
-							</div>
-							<div class="category-info category-info-1 grid-50 fright" style="background-image:url('img/salsa.png');">
-							<!-- public/ -->
-								<div class="mask"></div>
-							</div>
-
-							<div class="category-info category-info-3 grid-50 fleft" style="background-image:url('img/mac.png');">
-							<!-- public/ -->
-								<div class="mask"></div>
-							</div>
-							<div id="category2" class="category grid-50 fright" data-id="2" data-title="Strategy &amp; media planning">
-								<h3 style="padding-top: 2px;">Strategy &amp; media planning</h3>
-							</div>
-
-							<div id="category3" class="category grid-50 fleft" data-id="3" data-title="digital marketing &amp; analytics">
-								<h3 style="margin-top:16px;">digital marketing &amp; analytics</h3>
-							</div>
-							<div class="category-info category-info-2 grid-50 fright" style="background-image:url('img/IMAGEN ESTRATEGIA.png');">
-							<!-- public/ -->
-								<div class="mask"></div>
-							</div>
-						</div>
-
-						<div class="section-content grid-100 clearfix">
-
-
-							<div class="category-info category-info-4 grid-50 fleft" style="background-image:url('img/bricks.png');">
-							<!-- public/ -->
-								<div class="mask"></div>
-							</div>
-							<div id="category4" class="category grid-50 fright" data-id="4" data-title="digital technology">
-								<h3 style="padding-top: 17px;">digital technology</h3>
-							</div>
-
-							<div id="category5" class="category grid-50 fleft" data-id="5" data-title="intelligence insight">
-								<h3>intelligence insight</h3>
-							</div>
-							<div class="category-info category-info-6 grid-50 fright" style="background-image:url('img/pana.png');">
-							<!-- public/ -->
-								<div class="mask"></div>
-							</div>
-
-							<div class="category-info category-info-5 grid-50 fleft" style="background-image:url('img/imagen intelligence.png');">
-							<!-- public/ -->
-								<div class="mask"></div>
-							</div>
-
-							<div id="category6" class="category grid-50 fright" data-id="6" data-title="live experience">
-								<h3>live experience</h3>
-							</div>
-						</div>
+			<div class="slider">
+				<div class="category-slider33">
+					<div class="section-content grid-100 clearfix">
+						<div class="cliente fleft" style="background-image:url('img/c1.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c2.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c3.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c4.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c5.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c6.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c7.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c8.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c9.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c10.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c11.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c12.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c13.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c14.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/c15.png');"></div>
 					</div>
-
-					<div class="client-slider grid-100 superponer" style="position:absolute;">
-					</div>
-
-					<div class="work-slider grid-100 superponer" style="position:absolute;">
-						<div class="w-slider grid-100"></div>
-						<div class="work-description">
-							<div class="work-title" style="display: table;">
-								<div class="line-holder"><div class="lines"></div></div>
-								<span></span>
-								<div class="line-holder"><div class="lines"></div></div>
-							</div>
-							<div class="work-slogan">
-								<p></p>
-							</div>
-						</div>
+					<div class="section-content grid-100 clearfix">
+						<div class="cliente fleft" style="background-image:url('img/BONAMES.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/DOTRON.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO BARBER MUSIC.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO BARBER.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO BRICKS.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO CODIMATIX.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO CORPO.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO DIABLITOS.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO GALERIA .png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO JM.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO MERCK.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/LOGO PAIS BONITO.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/NOTOLAC.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/STAMYL.png');"></div>
+						<div class="cliente fleft" style="background-image:url('img/SUMITAN.png');"></div>
 					</div>
 				</div>
+
 			</div>
-		</section>
-	</div>
-
-	<div class="clearfix">
-		<section id="trabajo-section" class="trabajo-section fleft">
-<!-- 			<div class="diagonal_r orange"></div>
- -->			<header class="section-header">
-				<h1 class="section-title" style="color:#fdbe10;letter-spacing: 2px;"><span class="section-title">Trabajo</span></h1>
-			</header>
-
-			<div class="section-content">
-				<div class="section-span">
-					<h1 class="trabajo-span trabajo-1">¿Quieres unirte</h1>
-					<h1 class="trabajo-span trabajo-2">a nuestro equipo?</h1>
-				</div>
-				<span class="adjunta">Adjunta aqui tu CV o Portafolio</span>
-
-				<div class="cv-form">
-					{!! Form::open(['route' => ['cv'], 'method' => 'POST', 'files' => 'true']) !!}
-							{{ csrf_field() }}
-				
-							<div class="fileUpload">
-								{!! Form::text('holder', 'CV/Portafolio', array('disabled'=>'disabled', 'class' => 'uploadSpan', 'id' => 'cvUpload')) !!}
-
-								{!! Form::file('cv', array('class' => 'upload', 'id' => 'cv', 'required')) !!}
-								{!! Form::submit('submit', array('id'=>'cvSubmit', 'style' => 'opacity:0;')) !!}
-							</div>
-							<span class="msjError"> @if ($errors->first('cv')) *{{ $errors->first('cv') }} @endif</span>
-
-							<div class="success-message">
-								@if(Session::has('cv'))
-								{{ Session::get('cv')}}
-								@endif
-							</div>
-
-					{!! Form::close() !!}
-				</div>
-			</div>
-		</section>
-	</div>
-
-	<footer class="clearfix">
-		<section id="contact-section" class="contact-section">
-			<div class="diagonal_l_top grey"></div>
-			<div class="section-container grid-100">
-				<header class="section-header">
-					<h1 class="section-title">contacto</h1>
-					<div class="section-slogan">
-						<div class="lines fleft"></div>
-						<span> ¿Tienes una idea o proyecto? Escríbenos</span>
-						<div class="lines fright"></div>
-					</div>
-				</header>
-
-				<div class="contact grid-100 clearfix">
-					<div class="grid-60 fleft">
-						<form id="contact-form" class="contact-form" action="{{ url('/contact') }}" method="POST">
-							{{ csrf_field() }}
-							<div class="grid-50 fleft" style="padding-right: 6px;">
-								<input placeholder="Nombre y Apellido" class="form-control" name="name" type="text" required>
-								<span class="msjError"> @if ($errors->first('name')) *{{ $errors->first('name') }} @endif</span>
-							</div>
-							<div class="grid-50 fright" style="padding-left: 6px;">
-								<input placeholder="Correo" class="form-control" name="email" type="email" required>
-								<span class="msjError"> @if ($errors->first('email')) *{{ $errors->first('email') }} @endif</span>
-							</div>
-							<div class="grid-100">
-								<input placeholder="Motivo" class="form-control" name="motivation" type="text" required>
-								<span class="msjError"> @if ($errors->first('motivation')) *{{ $errors->first('motivation') }} @endif</span>
-								<textarea id="message" class="message form-control" name="message" placeholder="Mensaje" required></textarea>
-								<span class="msjError"> @if ($errors->first('message')) *{{ $errors->first('message') }} @endif</span>
-							</div>
-
-							<div class="formSend fright">
-								<span style="letter-spacing: 0px;">enviar</span>
-								<input id="send-btn" class="send-btn" name="send-btn" value="Send" type="submit">
-							</div>
-
-							<div class="success-message">
-								@if(Session::has('mail'))
-								{{ Session::get('mail')}}
-								@endif
-							</div>
-
-						</form>
-					</div>
-					<div class="info grid-40 fright">
-						<h2 style="letter-spacing: 3px;">¿dónde estamos?</h2>
-						<div class="lines"></div>
-						<div>
-							<ul>
-								<li>Caracas - Venezuela</li>
-								<li>Ciudad de Panamá - Panamá</li>
-								<li>Lima - Perú</li>
-							</ul>
-						</div>
-						<div class="lines"></div>
-
-						<div class="social-links">
-							<ul class="grid-100">
-								<li><a href="https://www.facebook.com/CriollosFA/" target="_blank"><img src="img/FB.png"></a></li>
-								<!-- public/ -->
-								<li><a href="https://www.linkedin.com/company/2640001" target="_blank"><img src="img/IN.png"></a></li>
-								<!-- public/ -->
-								<li><a href="https://twitter.com/CriollosFA?lang=es" target="_blank"><img src="img/TW.png"></a></li>
-								<!-- public/ -->
-								<li><a href="https://www.instagram.com/criollosfa/" target="_blank"><img src="img/IG.png"></a></li>
-								<!-- public/ -->
-								<li><a href="https://www.youtube.com" target="_blank"><img src="img/YOUTUBE.png"></a></li>
-								<!-- public/ -->
-							</ul>
-							<div class="correo">
-								<img src="img/CORREO.png">info@criollogroup.com
-								<!-- public/ -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<div class="grid-100 copyright">
-			Criollos Full Agency ® Todos los Derechos Reservados 2016
 		</div>
-	</footer>
+
+
+
+	</section>
+</div>
+
+<div class="clearfix">
+	<section id="portfolio-section" class="portfolio-section">
+		<div class="section-container grid-100">
+			<header class="section-header">
+				<h1 class="section-title">portafolio</h1>
+				<div class="section-slogan">
+					<div class="lines fleft"></div>
+					<span>UNA MUESTRA DE LO QUE HEMOS HECHO</span>
+					<div class="lines fright"></div>
+				</div>
+			</header>
+
+			<div class="flechaIzq flechaIzq-category">
+				<img src="{{URL::asset('img/flecha1.png')}}">
+			</div>
+			<div class="flechaDer flechaDer-category">
+				<img src="{{URL::asset('img/flecha2.png')}}">
+			</div>
+
+			<div class="flechaIzq flechaIzq-client hidden">
+				<img src="{{URL::asset('img/flecha1.png')}}">
+			</div>
+			<div class="flechaDer flechaDer-client hidden">
+				<img src="{{URL::asset('img/flecha2.png')}}">
+			</div>
+
+			<div class="flechaIzq flechaIzq-work hidden">
+				<img src="{{URL::asset('img/flecha1.png')}}">
+			</div>
+			<div class="flechaDer flechaDer-work hidden">
+				<img src="{{URL::asset('img/flecha2.png')}}">
+			</div>
+
+			<div class="close close-clients">
+				<img src="{{URL::asset('img/X.png')}}">
+			</div>
+			<div class="close close-works">
+				<img src="{{URL::asset('img/X.png')}}">
+			</div>
+
+			<div class="slider">
+				<div class="category-slider">
+					<div class="section-content grid-100 clearfix">
+						<div id="category1" class="category grid-50 fleft" data-id="1" data-title="Branding &amp; creativity">
+							<h3 style="padding-top: 7px;">Branding &amp; Creativity</h3>
+						</div>
+						<div class="category-info category-info-1 grid-50 fright" style="background-image:url('img/salsa.png');">
+							<!--  -->
+							<div class="mask"></div>
+						</div>
+
+						<div class="category-info category-info-3 grid-50 fleft" style="background-image:url('img/mac.png');">
+							<!--  -->
+							<div class="mask"></div>
+						</div>
+						<div id="category2" class="category grid-50 fright" data-id="2" data-title="Strategy &amp; media planning">
+							<h3 style="padding-top: 2px;">Strategy &amp; media planning</h3>
+						</div>
+
+						<div id="category3" class="category grid-50 fleft" data-id="3" data-title="digital marketing &amp; analytics">
+							<h3 style="margin-top:16px;">digital marketing &amp; analytics</h3>
+						</div>
+						<div class="category-info category-info-2 grid-50 fright" style="background-image:url('img/IMAGEN ESTRATEGIA.png');">
+							<!--  -->
+							<div class="mask"></div>
+						</div>
+					</div>
+
+					<div class="section-content grid-100 clearfix">
+
+
+						<div class="category-info category-info-4 grid-50 fleft" style="background-image:url('img/bricks.png');">
+							<!--  -->
+							<div class="mask"></div>
+						</div>
+						<div id="category4" class="category grid-50 fright" data-id="4" data-title="digital technology">
+							<h3 style="padding-top: 17px;">digital technology</h3>
+						</div>
+
+						<div id="category5" class="category grid-50 fleft" data-id="5" data-title="intelligence insight">
+							<h3>intelligence insight</h3>
+						</div>
+						<div class="category-info category-info-6 grid-50 fright" style="background-image:url('img/pana.png');">
+							<!--  -->
+							<div class="mask"></div>
+						</div>
+
+						<div class="category-info category-info-5 grid-50 fleft" style="background-image:url('img/imagen intelligence.png');">
+							<!--  -->
+							<div class="mask"></div>
+						</div>
+
+						<div id="category6" class="category grid-50 fright" data-id="6" data-title="live experience">
+							<h3>live experience</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="client-slider grid-100 superponer" style="position:absolute;">
+				</div>
+
+				<div class="work-slider grid-100 superponer" style="position:absolute;">
+					<div class="w-slider grid-100"></div>
+					<div class="work-description">
+						<div class="work-title" style="display: table;">
+							<div class="line-holder"><div class="lines"></div></div>
+							<span></span>
+							<div class="line-holder"><div class="lines"></div></div>
+						</div>
+						<div class="work-slogan">
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="clearfix">
+	<section id="trabajo-section" class="trabajo-section fleft">
+		<header class="section-header">
+			<h1 class="section-title" style="color:#fdbe10;letter-spacing: 2px;"><span class="section-title">Trabajo</span></h1>
+		</header>
+
+		<div class="section-content">
+			<div class="section-span">
+				<h1 class="trabajo-span trabajo-1">¿Quieres unirte</h1>
+				<h1 class="trabajo-span trabajo-2">a nuestro equipo?</h1>
+			</div>
+			<span class="adjunta">Adjunta aqui tu CV o Portafolio</span>
+
+			<div class="cv-form">
+				{!! Form::open(['route' => ['cv'], 'method' => 'POST', 'files' => 'true']) !!}
+				{{ csrf_field() }}
+
+				<div class="fileUpload">
+					{!! Form::text('holder', 'CV/Portafolio', array('disabled'=>'disabled', 'class' => 'uploadSpan', 'id' => 'cvUpload')) !!}
+
+					{!! Form::file('cv', array('class' => 'upload', 'id' => 'cv', 'required')) !!}
+					{!! Form::submit('submit', array('id'=>'cvSubmit', 'style' => 'opacity:0;')) !!}
+				</div>
+				<span class="msjError"> @if ($errors->first('cv')) *{{ $errors->first('cv') }} @endif</span>
+
+				<div class="success-message">
+					@if(Session::has('cv'))
+					{{ Session::get('cv')}}
+					@endif
+				</div>
+
+				{!! Form::close() !!}
+			</div>
+		</div>
+	</section>
+</div>
+
+<footer class="clearfix">
+	<section id="contact-section" class="contact-section">
+	<!-- 	<div class="diagonal_l_top grey"></div> -->
+		<div class="section-container grid-100">
+			<header class="section-header">
+				<h1 class="section-title">contacto</h1>
+				<div class="section-slogan">
+					<div class="lines fleft"></div>
+					<span> ¿Tienes una idea o proyecto? Escríbenos</span>
+					<div class="lines fright"></div>
+				</div>
+			</header>
+
+			<div class="contact grid-100 clearfix">
+				<div class="grid-60 fleft">
+					<form id="contact-form" class="contact-form" action="{{ url('/contact') }}" method="POST">
+						{{ csrf_field() }}
+						<div class="grid-50 fleft" style="padding-right: 6px;">
+							<input placeholder="Nombre y Apellido" class="form-control" name="name" type="text" required>
+							<span class="msjError"> @if ($errors->first('name')) *{{ $errors->first('name') }} @endif</span>
+						</div>
+						<div class="grid-50 fright" style="padding-left: 6px;">
+							<input placeholder="Correo" class="form-control" name="email" type="email" required>
+							<span class="msjError"> @if ($errors->first('email')) *{{ $errors->first('email') }} @endif</span>
+						</div>
+						<div class="grid-100">
+							<input placeholder="Motivo" class="form-control" name="motivation" type="text" required>
+							<span class="msjError"> @if ($errors->first('motivation')) *{{ $errors->first('motivation') }} @endif</span>
+							<textarea id="message" class="message form-control" name="message" placeholder="Mensaje" required></textarea>
+							<span class="msjError"> @if ($errors->first('message')) *{{ $errors->first('message') }} @endif</span>
+						</div>
+
+						<div class="formSend fright">
+							<span style="letter-spacing: 0px;">enviar</span>
+							<input id="send-btn" class="send-btn" name="send-btn" value="Send" type="submit">
+						</div>
+
+						<div class="success-message">
+							@if(Session::has('mail'))
+							{{ Session::get('mail')}}
+							@endif
+						</div>
+
+					</form>
+				</div>
+				<div class="info grid-40 fright">
+					<h2 style="letter-spacing: 3px;">¿dónde estamos?</h2>
+					<div class="lines"></div>
+					<div>
+						<ul>
+							<li>Caracas - Venezuela</li>
+							<li>Ciudad de Panamá - Panamá</li>
+							<li>Lima - Perú</li>
+						</ul>
+					</div>
+					<div class="lines"></div>
+
+					<div class="social-links">
+						<ul class="grid-100">
+							<li><a href="https://www.facebook.com/CriollosFA/" target="_blank"><img src="img/FB.png"></a></li>
+							<li><a href="https://www.linkedin.com/company/2640001" target="_blank"><img src="img/IN.png"></a></li>
+							<li><a href="https://twitter.com/CriollosFA?lang=es" target="_blank"><img src="img/TW.png"></a></li>
+							<li><a href="https://www.instagram.com/criollosfa/" target="_blank"><img src="img/IG.png"></a></li>
+							<li><a href="https://www.youtube.com" target="_blank"><img src="img/YOUTUBE.png"></a></li>
+							<!--  -->
+						</ul>
+						<div class="correo">
+							<img src="img/CORREO.png">info@criollosgroup.com
+							<!--  -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="grid-100 copyright">
+		Criollos Full Agency ® Todos los Derechos Reservados 2016
+	</div>
+</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="{{URL::asset('js/slick/slick.min.js')}}"></script>
-	<!-- public/ -->
-	<script type="text/javascript" src="{{URL::asset('js/criollos.js')}}"></script>
-	<!-- public/ -->
 	<script type="text/javascript" src="{{URL::asset('js/viewportchecker.js')}}"></script>
-	<!-- public/ -->
+	<script type="text/javascript" src="{{URL::asset('js/conteo.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('js/scrollTo.js')}}"></script>
-	<!-- public/ -->
+	<script type="text/javascript" src="{{URL::asset('js/criollos.js')}}"></script>
 
 </body>
 </html>
