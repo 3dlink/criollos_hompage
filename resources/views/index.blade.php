@@ -45,6 +45,9 @@
 						<li><a onclick="$('body').scrollTo('#nosotros-section',1000);">Nosotros</a></li>
 						<li><a onclick="$('body').scrollTo('#service-section',1000);">Servicios</a></li>
 						<li><a onclick="$('body').scrollTo('#portfolio-section',1000);">Portafolio</a></li>
+						<li><a onclick="$('body').scrollTo('#blog-section',1000);">Blog</a></li>
+						<li><a onclick="$('body').scrollTo('#tienda-section',1000);">Tienda</a></li>
+						<li><a onclick="$('body').scrollTo('#trabajo-section',1000);">Trabajo</a></li>
 						<li><a onclick="$('body').scrollTo('#contact-section',1000);">Contacto</a></li>
 					</ul>
 				</div>
@@ -58,7 +61,7 @@
 
 	<div class="clearfix">
 		<section id="nosotros-section" class="nosotros-section">
-			<div class="diagonal_r white"></div>
+			<!-- <div class="diagonal_r white"></div> -->
 			<div class="section_content">
 				<div class="grid-70 nosotros_content fleft">
 					<header class="section-header">
@@ -91,19 +94,17 @@
 		</section>
 	</div>
 
-	<div class="clearfix">
+	<div class="clearfix shape-1">
 		<section id="quote-section" class="quote-section">
 			<div class="mask">
-				<div class="diagonal_r_top white"></div>
+				<!-- <div class="diagonal_r_top white"></div> -->
 				<div class="quote-slider">
 					@foreach($quotes as $quote)
 					<div class="quote-holder">						
 						<span class="quote">
-							<div class="comilla fleft"><img class="comillaIzq" src="img/comilla1.png"></div>
-							<!--  -->
-							{{$quote->quote}}
-							<div class="comilla fright"><img class="comillaDer" src="img/comilla2.png"></div>
-							<!--  -->
+							<img style="display: inline;" class="comillaIzq" src="img/comilla1.png">
+							<span>&nbsp;{{$quote->quote}}&nbsp;</span>
+							<img style="display: inline;" class="comillaDer" src="img/comilla2.png">
 						</span>
 					</div>
 					@endforeach
@@ -113,9 +114,9 @@
 		</section>
 	</div>
 
-	<div class="clearfix">
+	<div class="clearfix" style="margin-top: -62px;">
 		<section id="service-section" class="service-section">
-			<div class="diagonal_r_top orange"></div>
+			<!-- <div class="diagonal_r_top orange"></div> -->
 			<div class="section-container">
 				<header class="section-header">
 					<h1 class="section-title" style="color:#494949;">Servicios</h1>
@@ -125,13 +126,6 @@
 						<div style="width:310px;" class="lines fright"></div>
 					</div>
 				</header>
-
-				<div class="flechaIzq flechaIzq-service">
-					<img src="{{URL::asset('img/FLECHA 1.png')}}">
-				</div>
-				<div class="flechaDer flechaDer-service">
-					<img src="{{URL::asset('img/FLECHA 2.png')}}">
-				</div>
 
 				<div class="service-span">
 					<span>Una fiolosofía de trabajo que se adapta a cualquier requerimiento</span>
@@ -206,8 +200,14 @@
 								<img src="img/BOTON LIVE EX.png">
 							</div>
 						</div>
-
 					</div>
+				</div>
+
+				<div class="flechaIzq flechaIzq-service">
+					<img src="{{URL::asset('img/FLECHA 1.png')}}">
+				</div>
+				<div class="flechaDer flechaDer-service">
+					<img src="{{URL::asset('img/FLECHA 2.png')}}">
 				</div>
 			</div>
 		</section>
@@ -266,12 +266,56 @@
 						<div class="cliente fleft" style="background-image:url('img/SUMITAN.png');"></div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
+		<svg width="0" height="0">
+			<defs>
+				<clipPath id="quote-shape" clipPathUnits="objectBoundingBox">
+					<polygon points="1 1, 1 0.1, 0 0, 0 0.86"/>
+				</clipPath>
+			</defs>
+		</svg>
 
+		<svg width="0" height="0">
+			<defs>
+				<clipPath id="tienda-shape" clipPathUnits="objectBoundingBox">
+					<polygon points="1 0.925, 1 0, 0 0, 0 1"/>
+				</clipPath>
+			</defs>
+		</svg>
 
+		<svg width="0" height="0">
+			<defs>
+				<clipPath id="home-shape" clipPathUnits="objectBoundingBox">
+					<polygon points="1 0.9, 1 0, 0 0, 0 1"/>
+				</clipPath>
+			</defs>
+		</svg>
+
+		<svg width="0" height="0">
+			<defs>
+				<clipPath id="textarea-shape" clipPathUnits="objectBoundingBox">
+					<polygon points="1 0.9, 1 0, 0 0, 0 1"/>
+				</clipPath>
+			</defs>
+		</svg>
+
+		<svg width="0" height="0">
+			<defs>
+				<clipPath id="portfolio-shape" clipPathUnits="objectBoundingBox">
+					<polygon points="1 1, 1 0, 0 0.05, 0 0.95"/>
+				</clipPath>
+			</defs>
+		</svg>
+
+		<svg width="0" height="0">
+			<defs>
+				<clipPath id="trabajo-shape" clipPathUnits="objectBoundingBox">
+					<polygon points="1 0.84, 1 0, 0 0, 0 1"/>
+				</clipPath>
+			</defs>
+		</svg>
 	</section>
 </div>
 
@@ -286,34 +330,6 @@
 					<div class="lines fright"></div>
 				</div>
 			</header>
-
-			<div class="flechaIzq flechaIzq-category">
-				<img src="{{URL::asset('img/flecha1.png')}}">
-			</div>
-			<div class="flechaDer flechaDer-category">
-				<img src="{{URL::asset('img/flecha2.png')}}">
-			</div>
-
-			<div class="flechaIzq flechaIzq-client hidden">
-				<img src="{{URL::asset('img/flecha1.png')}}">
-			</div>
-			<div class="flechaDer flechaDer-client hidden">
-				<img src="{{URL::asset('img/flecha2.png')}}">
-			</div>
-
-			<div class="flechaIzq flechaIzq-work hidden">
-				<img src="{{URL::asset('img/flecha1.png')}}">
-			</div>
-			<div class="flechaDer flechaDer-work hidden">
-				<img src="{{URL::asset('img/flecha2.png')}}">
-			</div>
-
-			<div class="close close-clients">
-				<img src="{{URL::asset('img/X.png')}}">
-			</div>
-			<div class="close close-works">
-				<img src="{{URL::asset('img/X.png')}}">
-			</div>
 
 			<div class="slider">
 				<div class="category-slider">
@@ -372,29 +388,238 @@
 						</div>
 					</div>
 				</div>
+				<div class="flechaIzq flechaIzq-category">
+					<img src="{{URL::asset('img/flecha1.png')}}">
+				</div>
+				<div class="flechaDer flechaDer-category">
+					<img src="{{URL::asset('img/flecha2.png')}}">
+				</div>
 
 				<div class="client-slider grid-100 superponer" style="position:absolute;">
+				</div>
+
+				<div class="flechaIzq flechaIzq-client hidden">
+					<img src="{{URL::asset('img/flecha1.png')}}">
+				</div>
+				<div class="flechaDer flechaDer-client hidden">
+					<img src="{{URL::asset('img/flecha2.png')}}">
 				</div>
 
 				<div class="work-slider grid-100 superponer" style="position:absolute;">
 					<div class="w-slider grid-100"></div>
 					<div class="work-description">
 						<div class="work-title" style="display: table;">
-							<div class="line-holder"><div class="lines"></div></div>
+							<div class="line-holder lh1"><div class="lines"></div></div>
 							<span></span>
-							<div class="line-holder"><div class="lines"></div></div>
+							<div class="line-holder lh2"><div class="lines"></div></div>
 						</div>
 						<div class="work-slogan">
 							<p></p>
 						</div>
 					</div>
 				</div>
+
+				<div class="flechaIzq flechaIzq-work hidden">
+					<img src="{{URL::asset('img/flecha1.png')}}">
+				</div>
+				<div class="flechaDer flechaDer-work hidden">
+					<img src="{{URL::asset('img/flecha2.png')}}">
+				</div>
+
+				<div class="close close-clients">
+					<img src="{{URL::asset('img/X.png')}}">
+				</div>
+				<div class="close close-works">
+					<img src="{{URL::asset('img/X.png')}}">
+				</div>
+
 			</div>
 		</div>
 	</section>
 </div>
 
 <div class="clearfix">
+	<section id="blog-section" class="blog-section">
+		<div class="section-container grid-100">
+			<header class="section-header">
+				<h1 class="section-title">Blog</h1>
+				<div class="section-slogan">
+					<div class="lines fleft"></div>
+					<span>lorem ipsum</span>
+					<div class="lines fright"></div>
+				</div>
+			</header>
+
+			<div class="blog-span">
+				<span><i>Desde marketing y creatividad, hasta los chinazos de la oficina.<br>En este blog se escribe de todo</i></span>
+			</div>
+
+			<div class="blog-container clearfix">
+				
+				<div class="blog-row grid-100 clearfix">
+					<div class="blog-item grid-50 fleft clearfix">
+						<div class="bi-photo grid-40 fleft">
+							<img class="bi-pic" src=""></img>
+						</div>
+						<div class="bi-info grid-60 fright">
+							<span class="bi-date">Noviembre 10, 2015</span>
+							<h2 class="bi-title"><i>Lorem Ipsum dolor sit amet.</i></h2>
+							<div class="mini-line"></div>
+
+							<p class="bi-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra suscipit sem, quis dignissim felis. </p>
+						</div>
+					</div>
+
+					<div class="blog-item grid-50 fright clearfix">
+						<div class="bi-photo grid-40 fleft">
+							<img class="bi-pic" src=""></img>
+						</div>
+						<div class="bi-info grid-60 fright">
+							<span class="bi-date">Noviembre 10, 2015</span>
+							<h2 class="bi-title"><i>Lorem Ipsum dolor sit amet.</i></h2>
+							<div class="mini-line"></div>
+
+							<p class="bi-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra suscipit sem, quis dignissim felis. </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="blog-row grid-100 clearfix">
+					<div class="blog-item grid-50 fleft clearfix">
+						<div class="bi-photo grid-40 fleft">
+							<img class="bi-pic" src=""></img>
+						</div>
+						<div class="bi-info grid-60 fright">
+							<span class="bi-date">Noviembre 10, 2015</span>
+							<h2 class="bi-title"><i>Lorem Ipsum dolor sit amet.</i></h2>
+							<div class="mini-line"></div>
+
+							<p class="bi-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra suscipit sem, quis dignissim felis. </p>
+						</div>
+					</div>
+
+					<div class="blog-item grid-50 fright clearfix">
+						<div class="bi-photo grid-40 fleft">
+							<img class="bi-pic" src=""></img>
+						</div>
+						<div class="bi-info grid-60 fright">
+							<span class="bi-date">Noviembre 10, 2015</span>
+							<h2 class="bi-title"><i>Lorem Ipsum dolor sit amet.</i></h2>
+							<div class="mini-line"></div>
+
+							<p class="bi-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra suscipit sem, quis dignissim felis. </p>
+						</div>
+					</div>
+				</div>
+
+				<span class="blog-mas"><i>Ver más</i></span>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="clearfix shape-2">
+	<div class="upsideDown"></div>
+	<section id="tienda-section" class="tienda-section">
+		<div class="section-container">
+			<header class="section-header">
+				<h1 class="section-title">Tienda</h1>
+				<div class="section-slogan">
+					<div class="lines fleft"></div>
+					<span>lorem ipsum</span>
+					<div class="lines fright"></div>
+				</div>
+			</header>
+
+			<div class="tienda-slider grid-100 clearfix">
+				<div>
+					<div class="item-container grid-25 fleft sufix-2">
+						<div class="ti-photo"><img class="ti-img" src=""></img></div>
+						<div class="ti-info">
+							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+						</div>
+						<span class="ti-comprar"><i>Comprar</i></span>
+					</div>
+
+					<div class="item-container grid-25 fleft sufix-2">
+						<div class="ti-photo"><img class="ti-img" src=""></img></div>
+						<div class="ti-info">
+							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+						</div>
+						<span class="ti-comprar"><i>Comprar</i></span>
+					</div>
+
+					<div class="item-container grid-25 fleft sufix-2">
+						<div class="ti-photo"><img class="ti-img" src=""></img></div>
+						<div class="ti-info">
+							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+						</div>
+						<span class="ti-comprar"><i>Comprar</i></span>
+					</div>
+
+					<div class="item-container grid-25 fleft">
+						<div class="ti-photo"><img class="ti-img" src=""></img></div>
+						<div class="ti-info">
+							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+							<span class="ti-desc">Lorem Ipsum dolor sit amet, onsectetur adipiscing elit.</span>				
+						</div>
+						<span class="ti-comprar"><i>Comprar</i></span>
+					</div>
+				</div>
+
+				<div>
+					<div class="item-container grid-25 fleft sufix-2">
+						<div class="ti-photo"><img class="ti-img" src=""></img></div>
+						<div class="ti-info">
+							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+						</div>
+						<span class="ti-comprar"><i>Comprar</i></span>
+					</div>
+
+					<div class="item-container grid-25 fleft sufix-2">
+						<div class="ti-photo"><img class="ti-img" src=""></img></div>
+						<div class="ti-info">
+							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+						</div>
+						<span class="ti-comprar"><i>Comprar</i></span>
+					</div>
+
+					<div class="item-container grid-25 fleft sufix-2">
+						<div class="ti-photo"><img class="ti-img" src=""></img></div>
+						<div class="ti-info">
+							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+						</div>
+						<span class="ti-comprar"><i>Comprar</i></span>
+					</div>
+
+					<div class="item-container grid-25 fleft">
+						<div class="ti-photo"><img class="ti-img" src=""></img></div>
+						<div class="ti-info">
+							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+							<span class="ti-desc">Lorem Ipsum dolor sit amet, onsectetur adipiscing elit.</span>				
+						</div>
+						<span class="ti-comprar"><i>Comprar</i></span>
+					</div>
+				</div>
+			</div>
+			<div class="flechaIzq flechaIzq-tienda">
+				<img src="{{URL::asset('img/FLECHA 1 tienda.png')}}">
+			</div>
+			<div class="flechaDer flechaDer-tienda">
+				<img src="{{URL::asset('img/FLECHA 2 tienda.png')}}">
+			</div>
+		</div>
+	</section>
+</div>
+
+
+<div class="clearfix" style="margin-top: -58px;">
 	<section id="trabajo-section" class="trabajo-section fleft">
 		<header class="section-header">
 			<h1 class="section-title" style="color:#fdbe10;letter-spacing: 2px;"><span class="section-title">Trabajo</span></h1>
@@ -415,7 +640,7 @@
 					{!! Form::text('holder', 'CV/Portafolio', array('disabled'=>'disabled', 'class' => 'uploadSpan', 'id' => 'cvUpload')) !!}
 
 					{!! Form::file('cv', array('class' => 'upload', 'id' => 'cv', 'required')) !!}
-					{!! Form::submit('submit', array('id'=>'cvSubmit', 'style' => 'opacity:0;')) !!}
+					{!! Form::submit('submit', array('id'=>'cvSubmit', 'style' => 'display:none;')) !!}
 				</div>
 				<span class="msjError"> @if ($errors->first('cv')) *{{ $errors->first('cv') }} @endif</span>
 
@@ -431,9 +656,9 @@
 	</section>
 </div>
 
-<footer class="clearfix">
+<footer class="clearfix" style="margin-top: -85px;">
 	<section id="contact-section" class="contact-section">
-	<!-- 	<div class="diagonal_l_top grey"></div> -->
+		<!-- 	<div class="diagonal_l_top grey"></div> -->
 		<div class="section-container grid-100">
 			<header class="section-header">
 				<h1 class="section-title">contacto</h1>
@@ -511,14 +736,14 @@
 	</div>
 </footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="{{URL::asset('js/slick/slick.min.js')}}"></script>
-	<script type="text/javascript" src="{{URL::asset('js/viewportchecker.js')}}"></script>
-	<script type="text/javascript" src="{{URL::asset('js/conteo.js')}}"></script>
-	<script type="text/javascript" src="{{URL::asset('js/scrollTo.js')}}"></script>
-	<script type="text/javascript" src="{{URL::asset('js/criollos.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{URL::asset('js/slick/slick.min.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('js/viewportchecker.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('js/conteo.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('js/scrollTo.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('js/criollos.js')}}"></script>
 
 </body>
 </html>
