@@ -66,11 +66,12 @@
 				<div class="grid-70 nosotros_content fleft">
 					<header class="section-header">
 						<h1 class="section-title" style="color:#494949;">Nosotros</h1>
-						<div class="section-slogan">
-							<div class="lines fleft"></div>
+						<div class="section-slogan" style="display:table; position: relative; width:100%">
+							<div class="line-holder lh"><div class="lines"></div></div>
 							<span style="color:#494949;">AGENCIA DE PUBLICIDAD CON 4 AÑOS DE EXPERIENCIA</span>
-							<div class="lines fright"></div>
+							<div class="line-holder lh0"><div class="lines"></div></div>
 						</div>
+
 					</header>
 					<p>Sómos la representación de la pasión profesional por lo que hacemos. Pues de ella se desprende nuestra inquietante curiosidad por re-inventar nuestras ideas en este proceso que llamámos <span>colando el café perfecto.</span>
 						<br><br>
@@ -443,10 +444,10 @@
 		<div class="section-container grid-100">
 			<header class="section-header">
 				<h1 class="section-title">Blog</h1>
-				<div class="section-slogan">
-					<div class="lines fleft"></div>
-					<span>lorem ipsum</span>
-					<div class="lines fright"></div>
+				<div class="section-slogan" style="display:table; position: relative;">
+					<div class="line-holder lh3"><div class="lines"></div></div>
+					<span>Lorem Ipsum</span>
+					<div class="line-holder lh4"><div class="lines"></div></div>
 				</div>
 			</header>
 
@@ -524,10 +525,10 @@
 		<div class="section-container">
 			<header class="section-header">
 				<h1 class="section-title">Tienda</h1>
-				<div class="section-slogan">
-					<div class="lines fleft"></div>
-					<span>lorem ipsum</span>
-					<div class="lines fright"></div>
+				<div class="section-slogan" style="display:table; position: relative;">
+					<div class="line-holder lh5"><div class="lines"></div></div>
+					<span>Lorem Ipsum</span>
+					<div class="line-holder lh6"><div class="lines"></div></div>
 				</div>
 			</header>
 

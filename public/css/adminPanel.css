@@ -55,9 +55,10 @@ td:nth-child(4){
 }
 
 .fileUpload {
+	float: left;
     position: relative;
     overflow: hidden;
-    margin: -3px 10px 0px 5px;
+    margin: 0px 10px 0px 5px;
 }
 .fileUpload input.upload {
     position: absolute;
@@ -73,8 +74,14 @@ td:nth-child(4){
 }
 
 .uploadSpan{
-	width: 33%;
+	width: 50%;
 	display: initial;
+	float: left;
+
+	max-width: 50%;
+	min-width: 50%;
+	min-height: 34px;
+	max-height: 200px;
 }
 
 label {

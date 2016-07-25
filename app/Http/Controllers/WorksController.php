@@ -66,18 +66,18 @@ class WorksController extends Controller
 			'description'	=>	'required'
 		]);
 
-		$time = strtotime("now");
-		$files= [];
-		$files = $request->file('originalImgName');
+		// $time = strtotime("now");
+		// $files= [];
+		// $files = $request->file('originalImgName');
 
-		foreach ($files as $file) {
-			$rules = array('file' => 'required|image');
-			$validator = Validator::make(array('file'=> $file), $rules);
+		// foreach ($files as $file) {
+		// 	$rules = array('file' => 'required|image');
+		// 	$validator = Validator::make(array('file'=> $file), $rules);
 
-			if ($validator->fails()) {
-				return redirect("admin.works.create")->withErrors($validator);
-			}
-		}
+		// 	if ($validator->fails()) {
+		// 		return redirect("admin.works.create")->withErrors($validator);
+		// 	}
+		// }
 
 		$work = new Work();
 		$work -> title = $request -> title;
@@ -92,7 +92,37 @@ class WorksController extends Controller
 
 		$work -> save();
 
-		$work = DB::table('works')->where('title', $request->title)->orderBy('created_at', 'desc')->first();
+		// $work = DB::table('works')->where('title', $request->title)->orderBy('created_at', 'desc')->first();
+
+		// foreach ($files as $file) {
+		// 	$image = new Image();
+
+		// 	$filename="img".$time.$this->__randomStr ( 3 ).'.'.$file->getClientOriginalExtension();
+
+		// 	$file->move(base_path().'/public/img/', $filename);
+
+		// 	$image -> image = $filename;
+		// 	$image -> originalName = $file->getClientOriginalName();
+		// 	$image -> work_id = $work->id;
+
+		// 	$image -> save();
+		// }
+
+
+		return redirect() -> route('admin.works.index', $client->id);
+	}
+
+	public function addImg($id){
+		return view('admin.works.add')->with('client', session()->get('client'));
+	}
+
+	public function storeImg(Request $request)
+	{
+		$time = strtotime("now");
+		$files= [];
+		$files = $request->file('originalImgName');
+
+		$work = session()->get('work');
 
 		foreach ($files as $file) {
 			$image = new Image();
@@ -108,8 +138,7 @@ class WorksController extends Controller
 			$image -> save();
 		}
 
-
-		return redirect() -> route('admin.works.index', $client->id);
+		return response()->json(['success', 200]);
 	}
 
 	/**

@@ -61,7 +61,8 @@
 				<div class="panel-footer">
 					<a href="{{ route('admin.clients.index', session()->get('category')->id) }}"><button class="btn btn-default" type="button">Back</button></a>
 					<a href="" data-toggle="modal" data-target="#workModal"><button class="btn btn-danger">Delete Work</button></a>
-					<a href="{{ route('admin.works.edit', $work->id) }}"><button class="btn btn-primary">Edit Work</button></a></div>
+					<a href="{{ route('admin.works.edit', $work->id) }}"><button class="btn btn-primary">Edit Work</button></a>
+					<a href="{{ route('admin.works.addI', $work->id) }}"><button class="btn btn-success">Add Images</button></a></div>
 
 					<div id="workModal" class="modal fade" role="dialog">
 						<div class="modal-dialog">

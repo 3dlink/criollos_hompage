@@ -727,7 +727,7 @@ span.section-title{
 	position: relative;
 }
 
-.work-title .line-holder{
+.work-title .line-holder, .blog-section .section-slogan .line-holder, .tienda-section .section-slogan .line-holder, .nosotros-section .section-slogan .line-holder{
 	position: absolute;
 }
 
@@ -745,6 +745,11 @@ span.section-title{
 }
 .work-description .lines{
 	background-color: white;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.blog-section .section-slogan .lines, .tienda-section .section-slogan .lines, .nosotros-section .section-slogan .lines{
 	margin: 0;
 	margin-bottom: 5px;
 }
@@ -1006,7 +1011,7 @@ span.section-title{
 }
 
 .adjunta{
-	font-family: 'Oswald';
+	font-family: 'OswaldItalic';
 	font-size: 25px;
 	color: #fdbe10;
 	letter-spacing: 2px;

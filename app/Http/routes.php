@@ -88,6 +88,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as'    =>  'admin.works.updateImg'
     ]);
 
+    Route::get('works/{id}/addI', [
+        'uses'  =>  'WorksController@addImg',
+        'as'    =>  'admin.works.addI'
+    ]);
+
+    Route::post('works/storeI', [
+        'uses'  =>  'WorksController@storeImg',
+        'as'    =>  'admin.works.storeI'
+    ]);
+
     Route::resource('quotes', 'QuotesController');
 
     Route::get('quotes/{id}/destroy', [

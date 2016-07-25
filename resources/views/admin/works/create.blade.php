@@ -24,7 +24,7 @@
 							<span class="msjError"> @if ($errors->first('description')) *{{ $errors->first('description') }} @endif</span>
 						</div>
 
-						<div class="form-group">
+<!-- 						<div class="form-group">
 							{!! Form::label('originalImgName', 'Image') !!}
 							{!! Form::text('holder', 'Choose Images', array('disabled'=>'disabled', 'class' => 'form-control uploadSpan', 'id' => 'frontUpload')) !!}
 							
@@ -34,7 +34,7 @@
 							</div>
 
 							<span class="msjError"> @if ($errors->first('originalImgName')) *{{ $errors->first('originalImgName') }} @endif</span>
-						</div>
+						</div> -->
 	            </div>
 
 	            <div class="panel-footer">

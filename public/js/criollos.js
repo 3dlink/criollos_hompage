@@ -361,5 +361,14 @@ function locateArrows(){
 
 	$('.upload').css('left', $('#cvUpload').position().left);
 
+	$('.lh, .lh0').css('top', $('.nosotros-section .section-slogan span').position().top);
 	$('.lh1, .lh2').css('top', $('.work-title span').position().top);
-}
+	$('.lh3, .lh4').css('top', $('.blog-section .section-slogan span').position().top);
+	$('.lh5, .lh6').css('top', $('.tienda-section .section-slogan span').position().top);
+
+	$('.lh').css('right', $('.nosotros-section .section-slogan span').position().left + $('.nosotros-section .section-slogan span').width() + 15);
+	$('.lh0').css('left', $('.nosotros-section .section-slogan span').position().left +  $('.nosotros-section .section-slogan span').width() + 15);
+	$('.lh3').css('right', $('.blog-section .section-slogan span').position().left + $('.blog-section .section-slogan span').width() + 15);
+	$('.lh4').css('left', $('.blog-section .section-slogan span').position().left +  $('.blog-section .section-slogan span').width() + 15);
+}	$('.lh5').css('right', $('.tienda-section .section-slogan span').position().left + $('.tienda-section .section-slogan span').width() + 15);
+	$('.lh6').css('left', $('.tienda-section .section-slogan span').position().left +  $('.tienda-section .section-slogan span').width() + 15);

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{{URL::asset('/css/adminPanel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('/js/dropzone-4.3.0/dist/min/dropzone.min.css')}}">
 
 
 
@@ -105,6 +106,7 @@
         {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 
         <script src="https://use.fontawesome.com/011b552131.js"></script>
+        <script type="text/javascript" src="{{URL::asset('/js/dropzone-4.3.0/dist/min/dropzone.min.js')}}"></script>
 
 
     <script type="text/javascript">
@@ -112,5 +114,7 @@
             document.getElementById("frontUpload").value = this.value;
         };
     </script>
+
+    @yield('script')
 </body>
 </html>
