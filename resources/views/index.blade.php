@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+
+	{!! SEOMeta::generate() !!}
 
 	<!-- Meta -->
 	<meta charset="utf-8">

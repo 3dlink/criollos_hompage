@@ -53,6 +53,9 @@
 			this.on("success", 
 				myDropzone.processQueue.bind(myDropzone)
 			);
+		},
+		queuecomplete: function(){
+			$('button').click();
 		}
 	});
 	</script>

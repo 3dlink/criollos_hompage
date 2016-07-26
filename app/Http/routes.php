@@ -105,6 +105,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as'    =>  'admin.quotes.destroy'
     ]);
 
+    Route::resource('seo', 'SeosController');
+
+    Route::get('seo/{id}/destroy', [
+        'uses'  =>  'SeosController@destroy',
+        'as'    =>  'admin.seo.destroy'
+    ]);
+
 });
 
 Route::auth();

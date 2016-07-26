@@ -9,13 +9,22 @@ use App\Category;
 use App\Client;
 use App\Work;
 use App\Quote;
+use App\Seo;
 use Validator;
 use Mail;
+use SEOMeta;
 
 class mainController extends Controller
 {
 	public function index(){
 		$quotes = Quote::all();
+		$seo = Seo::first();
+		$kw = explode(',', $seo->keywords);
+
+		SEOMeta::setTitle($seo->title);
+		SEOMeta::setDescription($seo->description);
+		SEOMeta::addKeyword($kw);
+
 		return view('index')->with('quotes', $quotes);
 	}
 

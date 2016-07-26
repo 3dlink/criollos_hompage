@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{URL::asset('/css/adminPanel.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::asset('/js/dropzone-4.3.0/dist/min/dropzone.min.css')}}">
 
-
+    @yield('css')
 
 </head>
 <body id="app-layout">
@@ -69,6 +69,8 @@
                                 <li><a href="{{ route('admin.quotes.index') }}">Quotes </a></li>
                             </ul>
                         </li>
+
+                        <li><a href="{{ Route('admin.seo.index') }}">SEO</a></li>
                     </li>
                     @endif
                 </ul>
