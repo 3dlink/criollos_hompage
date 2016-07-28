@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('css')
+
+	<style type="text/css">
+		.rdmsh{
+			max-height: 500px;
+			max-width: 500px;
+		}
+	</style>
+@endsection
+
 @section('content')
 
 <div class="container">
@@ -11,7 +21,7 @@
 
 				<div class="panel-body">
 
-					<img src="../../img/{{$image->image}}">
+					<img class="rdmsh" src="../../img/{{$image->image}}">
 				</div>
 
 				<div class="panel-footer">
