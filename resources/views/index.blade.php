@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/styles.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('js/slick/slick.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/responsive_1.css')}}">
 
 
 </head>
@@ -123,9 +124,9 @@
 				<header class="section-header">
 					<h1 class="section-title" style="color:#494949;">Servicios</h1>
 					<div class="section-slogan">
-						<div style="width:310px;" class="lines fleft"></div>
+						<div class="lines fleft"></div>
 						<span style="color:#494949;">Nuestras esquinas</span>
-						<div style="width:310px;" class="lines fright"></div>
+						<div class="lines fright"></div>
 					</div>
 				</header>
 
@@ -233,7 +234,7 @@
 
 			<div class="slider">
 				<div class="category-slider33">
-					<div class="section-content grid-100 clearfix">
+<!-- 					<div class="section-content grid-100 clearfix">
 						<div class="cliente fleft" style="background-image:url('img/c1.png');"></div>
 						<div class="cliente fleft" style="background-image:url('img/c2.png');"></div>
 						<div class="cliente fleft" style="background-image:url('img/c3.png');"></div>
@@ -266,7 +267,7 @@
 						<div class="cliente fleft" style="background-image:url('img/NOTOLAC.png');"></div>
 						<div class="cliente fleft" style="background-image:url('img/STAMYL.png');"></div>
 						<div class="cliente fleft" style="background-image:url('img/SUMITAN.png');"></div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -458,7 +459,7 @@
 
 			<div class="blog-container clearfix">
 				
-				<div class="blog-row grid-100 clearfix">
+<!-- 				<div class="blog-row grid-100 clearfix">
 					<div class="blog-item grid-50 fleft clearfix">
 						<div class="bi-photo grid-40 fleft">
 							<img class="bi-pic" src=""></img>
@@ -514,7 +515,7 @@
 					</div>
 				</div>
 
-				<span class="blog-mas"><i>Ver más</i></span>
+				<span class="blog-mas"><i>Ver más</i></span> -->
 			</div>
 		</div>
 	</section>
