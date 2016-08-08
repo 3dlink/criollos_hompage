@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 1024px){
 	/* GENERAL */
 	.lines{
@@ -15,7 +16,7 @@
 	}
 
 	#quote-section .mask{
-		padding: 100px 20px; 
+		padding: 100px 20px;
 	}
 /*Quote*/
 
@@ -123,7 +124,7 @@
 	span {
 		font-size: 20px;
 	}
-	
+
 	.lines{
 		margin: 12px 0;
 	}
@@ -135,7 +136,7 @@
 	}
 
 	#quote-section .mask{
-		padding: 50px 20px; 
+		padding: 50px 20px;
 	}
 /*Quote*/
 
@@ -192,11 +193,11 @@
 	}
 
 	#quote-section .mask{
-		padding: 50px 10px; 
+		padding: 50px 10px;
 	}
 
 	.quote span{
-		font-size: 30px;
+		font-size: 20px;
 	}
 
 	.comillaIzq, .comillaDer{
@@ -210,8 +211,10 @@
 	}
 
 	.services .service-container{
-		height: 250px;
-	}
+        height: 250px;
+        width: 80%;
+        margin: 0 10%;
+    }
 
 	.service-desc{
 		font-size: 10px;
@@ -236,7 +239,7 @@
 	.client-holder span{
 		font-size: 18pt !important;
 	}
-	
+
 /*Portfolio*/
 
 /* Blog */
