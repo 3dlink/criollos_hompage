@@ -8,6 +8,18 @@
 	.section-header{
 		margin-bottom: 25px;
 	}
+
+	.flechaIzq img, .flechaDer img{
+		height: 60px;
+	}
+
+	.close img{
+		height: 50px;
+	}
+
+	.comillaIzq, .comillaDer{
+		height: 20px;
+	}
 	/* GENERAL */
 
 /*Quote*/
@@ -18,11 +30,18 @@
 	#quote-section .mask{
 		padding: 100px 20px;
 	}
+
+	.quote span{
+		margin-left: 25px;
+		font-size: 35px;
+	}
 /*Quote*/
 
 /*Clientes*/
 	.cliente{
 		width: 33%;
+		height: 120px;
+		background-size: 40%;
 	}
 
 	.clients-section{
@@ -30,62 +49,33 @@
 	}
 /*Clientes*/
 
-/*Service*/
+/*Services*/
+
 	#service-section .section-container{
 		width: 100%;
+		padding: 0 10px;
 	}
 
-	#service-section .section-slogan{
-		width: 80%;
-		margin: 0 auto;
-	}
-
-	.service-span{
-		width: 100%;
-		margin-top: 25px;
-	}
-
-	.service-container{
-		width: 60%;
-		margin: 0 20%;
-
-		margin-bottom: 25px;
-	}
-
-	.services .service-container{
-		height: 300px;
-	}
-
-	.service-slider{
-		margin-top: 35px;
-	}
-
-	.service-info{
-		padding-top: 25px;
-	}
-
-	.service-desc{
+/*	.service-desc{
 		font-size: 24px;
 		line-height: 24px;
 	}
 
 	.service-title{
 		font-size: 26px;
-	}
-
-	.service-container .lines{
-		width: 60%;
-		margin-left: 20% !important;
-	}
-/*Service*/
+	}*/
+/*Services*/
 
 /*Portfolio*/
+	#portfolio-section{
+		height: 1400px;
+	}
 	#portfolio-section .section-container, .work-title{
 		width: 100%;
 	}
 
 	#portfolio-section .section-slogan{
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 	}
 
@@ -99,6 +89,26 @@
 
 	.work-slogan p{
 		font-size: 20px;
+	}
+
+	.work-img{
+		height: 350px;
+	}
+
+	.category{
+		padding-top: 160px;
+	}
+
+	.category h3{
+		font-size: 20px;
+	}
+
+	.category-info{
+		background-size: cover;
+	}
+
+	.category, .category-info, .client{
+		height: 300px;
 	}
 /*Portfolio*/
 
@@ -141,10 +151,59 @@
 /*Quote*/
 
 /*Portfolio*/
-	#portfolio-section .section-slogan .lines{
+/*	#portfolio-section .section-slogan .lines{
 		width: 10%;
+	}*/
+
+	.category, .category-info, .client{
+		height: 200px;
+	}
+
+	.category{
+		padding-top: 100px;
+	}
+
+	#portfolio-section{
+		height: 1200px;
 	}
 /*Portfolio*/
+
+
+/*Service*/
+	#service-section .section-slogan{
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.service-span{
+		width: 100%;
+		margin-top: 25px;
+	}
+
+	.service-container{
+		width: 60%;
+		margin: 0 20%;
+
+		margin-bottom: 25px;
+	}
+
+	.services .service-container{
+		height: 300px;
+	}
+
+	.service-slider{
+		margin-top: 35px;
+	}
+
+	.service-info{
+		padding-top: 25px;
+	}
+
+	.service-container .lines{
+		width: 60%;
+		margin-left: 20% !important;
+	}
+/*Service*/
 
 /*Service*/
 	.service-desc{
@@ -161,6 +220,10 @@
 /*Portfolio*/
 	.work-slogan p{
 		font-size: 15px;
+	}
+
+	.client-holder span{
+		font-size: 18pt !important;
 	}
 
 /*Portfolio*/
@@ -199,10 +262,6 @@
 	.quote span{
 		font-size: 20px;
 	}
-
-	.comillaIzq, .comillaDer{
-		height: 20px;
-	}
 /* Quote */
 
 /* Service */
@@ -234,6 +293,10 @@
 /*Portfolio*/
 	#portfolio-section .section-slogan span{
 		font-size: 13px;
+	}
+
+	#portfolio-section .section-slogan .lines{
+		width: 12%;
 	}
 
 	.client-holder span{
@@ -268,4 +331,8 @@
 	}
 
 /*Tienda*/
+
+	.cliente{
+		height: 80px;
+	}
 }
