@@ -424,7 +424,14 @@ function locateArrows(){
 }
 
 function clientSection (){
-	var array = ["c1.png","c2.png","c3.png","c4.png","c5.png","c6.png","c7.png","c8.png","c9.png","c10.png","c11.png","c12.png","c13.png","c14.png","c15.png","BONAMES.png","DOTRON.png","LOGO BARBER MUSIC.png","LOGO BARBER.png","LOGO BRICKS.png","LOGO CODIMATIX.png","LOGO CORPO.png","LOGO DIABLITOS.png","LOGO GALERIA.png","LOGO JM.png","LOGO MERCK.png","LOGO PAIS BONITO.png","LOGO NOTOLAC.png","LOGO STAMYL.png","LOGO SUMITAN.png"];
+	// var array = ["c1.png","c2.png","c3.png","c4.png","c5.png","c6.png","c7.png","c8.png","c9.png","c10.png","c11.png","c12.png","c13.png","c14.png","c15.png","BONAMES.png","DOTRON.png","LOGO BARBER MUSIC.png","LOGO BARBER.png","LOGO BRICKS.png","LOGO CODIMATIX.png","LOGO CORPO.png","LOGO DIABLITOS.png","LOGO GALERIA.png","LOGO JM.png","LOGO MERCK.png","LOGO PAIS BONITO.png","LOGO NOTOLAC.png","LOGO STAMYL.png","LOGO SUMITAN.png"];
+	
+	var array = [];
+
+	for (var i = 0; i < object.length; i++) {
+		array.push(object[i].image);
+	}
+
 	var qty,x;
 	var slider = $(".category-slider33");
 	slider.slick('unslick');

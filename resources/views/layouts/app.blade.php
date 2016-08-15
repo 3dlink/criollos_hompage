@@ -35,7 +35,7 @@
                 <!-- Branding Image -->
                 
                 <a class="navbar-brand" target="_blank" href="{{ url('/') }}">
-                    Criollos
+                    <img class="logo" src="{{URL::asset('img/CRIOLLOS FULL AGENCY.png')}}">
                 </a>
             </div>
 
@@ -67,6 +67,7 @@
 
                             <ul class="dropdown-menu">
                                 <li><a href="{{ route('admin.quotes.index') }}">Quotes </a></li>
+                                <li><a href="{{ route('admin.clientv.index') }}">Clients </a></li>
                             </ul>
                         </li>
 
@@ -111,12 +112,23 @@
         <script type="text/javascript" src="{{URL::asset('/js/dropzone-4.3.0/dist/min/dropzone.min.js')}}"></script>
 
 
-    <script type="text/javascript">
-        document.getElementById("originalImgName").onchange = function(){
-            document.getElementById("frontUpload").value = this.value;
-        };
-    </script>
+        <script type="text/javascript">
+            function mostrarImagen(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#img_destino img').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            };
 
-    @yield('script')
-</body>
-</html>
+            document.getElementById("originalImgName").onchange = function(){
+                document.getElementById("frontUpload").value = this.value;
+                mostrarImagen(this);
+            };
+        </script>
+
+        @yield('script')
+    </body>
+    </html>

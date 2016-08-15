@@ -33,6 +33,10 @@ Route::get('/works/{id}', [
     'uses'  =>  'WorksController@get'
 ]);
 
+// Route::get('/clientv', [
+//     'uses'  =>  'ClientVsController@get'
+// ]);
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 	Route::get('/', [
 		'uses' 	=>	'HomeController@index',
@@ -112,6 +116,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as'    =>  'admin.seo.destroy'
     ]);
 
+    Route::resource('clientv', 'ClientVsController');
+
+    Route::get('clientv/{id}/destroy', [
+        'uses'  =>  'ClientVsController@destroy',
+        'as'    =>  'admin.clientv.destroy'
+    ]);
 });
 
 Route::auth();

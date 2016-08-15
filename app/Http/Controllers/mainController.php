@@ -13,6 +13,7 @@ use App\Seo;
 use Validator;
 use Mail;
 use SEOMeta;
+use App\ClientV;
 
 class mainController extends Controller
 {
@@ -25,7 +26,10 @@ class mainController extends Controller
 		SEOMeta::setDescription($seo->description);
 		SEOMeta::addKeyword($kw);
 
-		return view('index')->with('quotes', $quotes);
+		$clients = ClientV::all();
+		$clients->toJson();
+
+		return view('index')->with('quotes', $quotes)->with('clients', $clients);
 	}
 
 	public function contact (Request $request){
@@ -77,7 +81,7 @@ class mainController extends Controller
 		$mime = $request->cv->getMimeType();
 
 		$sent= Mail::send('mail.cv', array('cv' => 'Nuevo CV/Portafolio'), function ($m) use ($path, $name, $mime){
-			$m->to("o0serras0o@gmail.com");
+			$m->to("");
 			$m->subject("Trabajo");
 			$m->attach($path, array(
 				'as' => $name, 

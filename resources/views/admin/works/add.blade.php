@@ -46,18 +46,11 @@
 				e.stopPropagation();
 				myDropzone.processQueue();
 			});
-			this.on("complete", function(file) {
-				myDropzone.removeFile(file);
-			});
-
-			this.on("success", 
-				myDropzone.processQueue.bind(myDropzone)
-			);
 		},
 		queuecomplete: function(){
 			$('button').click();
 		}
 	});
-	</script>
+</script>
 
 @endsection

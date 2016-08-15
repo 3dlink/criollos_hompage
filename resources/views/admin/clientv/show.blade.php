@@ -17,15 +17,15 @@
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default">
 
-				<div class="panel-heading center">{{$image->originalName}}</div>
+				<div class="panel-heading center">{{$client->originalImgName}}</div>
 
 				<div class="panel-body">
 
-					<img class="rdmsh" src="{{URL::asset('/img').'/'.$image->image}}">
+					<img class="rdmsh" src="{{URL::asset('/img').'/'.$client->image}}">
 				</div>
 
 				<div class="panel-footer">
-					<a href="{{ route('admin.works.index', session()->get('client')->id) }}"><button class="btn btn-default" type="button">Back</button></a>
+					<a href="{{ route('admin.clientv.index') }}"><button class="btn btn-default" type="button">Back</button></a>
 				</div>
 
 			</div>

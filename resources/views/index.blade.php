@@ -33,9 +33,9 @@
 					</a>
 				</div>
 
-									<!-- Collapsed Hamburger -->
-					<button id="menuMobile" style="background-image: url('/img/menuMovil.png'); background-repeat: no-repeat; background-size: 100% 100%;  width: 50px; height: 20px; border: 0px; border-radius: 0px; position: absolute; top: 15px; right: 10px;" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo">
-					</button>
+				<!-- Collapsed Hamburger -->
+				<button id="menuMobile" style="background-image: url('/img/menuMovil.png'); background-repeat: no-repeat; background-size: 100% 100%;  width: 50px; height: 20px; border: 0px; border-radius: 0px; position: absolute; top: 15px; right: 10px;" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo">
+				</button>
 
 
 
@@ -58,17 +58,17 @@
 
 	<div id="home-section" class="firstDiagonal home-section clearfix">
 
-	  <div id="demo" class="collapse firstDiagonal" style="position:absolute;width: 100%;">
-				<ul class="nav navbar-nav navbar-right menuMobile">
-						<li><a onclick="$('body').scrollTo('#nosotros-section',1000);">Nosotros</a></li>
-						<li><a onclick="$('body').scrollTo('#service-section',1000);">Servicios</a></li>
-						<li><a onclick="$('body').scrollTo('#portfolio-section',1000);">Portafolio</a></li>
-						<li><a onclick="$('body').scrollTo('#blog-section',1000);">Blog</a></li>
-						<li><a onclick="$('body').scrollTo('#tienda-section',1000);">Tienda</a></li>
-						<li><a onclick="$('body').scrollTo('#trabajo-section',1000);">Trabajo</a></li>
-						<li><a onclick="$('body').scrollTo('#contact-section',1000);">Contacto</a></li>
-					</ul>
-					  </div>
+		<div id="demo" class="collapse firstDiagonal" style="position:absolute;width: 100%;">
+			<ul class="nav navbar-nav navbar-right menuMobile">
+				<li><a onclick="$('body').scrollTo('#nosotros-section',1000);">Nosotros</a></li>
+				<li><a onclick="$('body').scrollTo('#service-section',1000);">Servicios</a></li>
+				<li><a onclick="$('body').scrollTo('#portfolio-section',1000);">Portafolio</a></li>
+				<li><a onclick="$('body').scrollTo('#blog-section',1000);">Blog</a></li>
+				<li><a onclick="$('body').scrollTo('#tienda-section',1000);">Tienda</a></li>
+				<li><a onclick="$('body').scrollTo('#trabajo-section',1000);">Trabajo</a></li>
+				<li><a onclick="$('body').scrollTo('#contact-section',1000);">Contacto</a></li>
+			</ul>
+		</div>
 		<img src="/img/home.png">
 	</div>
 
@@ -82,8 +82,8 @@
 <!--
 						<div class="section-slogan">
 							<div class="lines fleft"></div>
- -->
-							<div class="section-slogan" style="    border-top: 2px solid rgb(253,190,16);  line-height: 1px; display:table; position: relative; width:100%">
+						-->
+						<div class="section-slogan" style="    border-top: 2px solid rgb(253,190,16);  line-height: 1px; display:table; position: relative; width:100%">
 							<span style="      background-color: white;  padding: 0 10px; color:#494949;">AGENCIA DE PUBLCIDAD CON 4 AÑOS DE EXPERIENCIA</span>
 						</div>
 					</header>
@@ -141,7 +141,7 @@
 			<div class="section-container">
 				<header class="section-header">
 					<h1 class="section-title" style="color:#494949;">Servicios</h1>
-<!-- 					<div class="section-slogan"> -->
+					<!-- 					<div class="section-slogan"> -->
 					<div class="section-slogan" style="    border-top: 2px solid #494949;  line-height: 1px; width:50%">
 						<span style=" background-color: #f4b30f;  padding: 0 10px; color:#494949;">Nuestras esquinas</span>
 					</div>
@@ -240,7 +240,7 @@
 					<h1 class="section-title" style="color:#fdbe10;letter-spacing: 2px;"><span class="section-title">Clientes</span></h1>
 				</header>
 
- 			<!--
+			<!--
 				<div class="flechaIzq flechaIzq-category2">
 					<img src="{{URL::asset('img/flecha1.png')}}">
 				</div>
@@ -269,12 +269,12 @@
 						<div class="cliente fleft" style="background-image:url('/img/c14.png');"></div>
 						<div class="cliente fleft" style="background-image:url('/img/c15.png');"></div>
 					</div>
- -->
-				</div>
+				-->
 			</div>
 		</div>
-		</section>
 	</div>
+</section>
+</div>
 
 <div class="clearfix">
 	<section id="portfolio-section" class="portfolio-section">
@@ -404,8 +404,8 @@
 			<header class="section-header">
 				<h1 class="section-title">Blog</h1>
 
- 					<div class="section-slogan" style="display:table; position: relative;    border-top: 2px solid rgb(253,190,16);  line-height: 1px; width:50%">
-						<span style=" background-color: white;  padding: 0 10px; color:#494949;">Lorem Ipsum</span>
+				<div class="section-slogan" style="display:table; position: relative;    border-top: 2px solid rgb(253,190,16);  line-height: 1px; width:50%">
+					<span style=" background-color: white;  padding: 0 10px; color:#494949;">Lorem Ipsum</span>
 				</div>
 			</header>
 
@@ -473,10 +473,10 @@
 				</div>
 
 				<span class="blog-mas"><i>Ver más</i></span>
- -->
-			</div>
+			-->
 		</div>
-	</section>
+	</div>
+</section>
 </div>
 
 <div id="2Polygon" class="clearfix shape-2">
@@ -485,228 +485,228 @@
 		<div class="section-container">
 			<header class="section-header">
 				<h1 class="section-title">Tienda</h1>
- 				<div class="section-slogan" style="display:table; position: relative;">
- 				<div class="section-slogan" style="display:table; position: relative;    border-top: 2px solid #494949;  line-height: 1px; width:50%">
-					<span style=" background-color: #f4b30f;  padding: 0 10px; color:#494949;">Lorem Ipsum</span>
-				</div>
-			</header>
-
-			<div class="tienda-slider grid-100 clearfix">
-				<div>
-					<div class="item-container grid-25 fleft sufix-2">
-						<div class="ti-photo"><img class="ti-img" src=""></img></div>
-						<div class="ti-info">
-							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
-							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
-						</div>
-						<span class="ti-comprar"><i>Comprar</i></span>
+				<div class="section-slogan" style="display:table; position: relative;">
+					<div class="section-slogan" style="display:table; position: relative;    border-top: 2px solid #494949;  line-height: 1px; width:50%">
+						<span style=" background-color: #f4b30f;  padding: 0 10px; color:#494949;">Lorem Ipsum</span>
 					</div>
+				</header>
 
-					<div class="item-container grid-25 fleft sufix-2">
-						<div class="ti-photo"><img class="ti-img" src=""></img></div>
-						<div class="ti-info">
-							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
-							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
-						</div>
-						<span class="ti-comprar"><i>Comprar</i></span>
-					</div>
-
-					<div class="item-container grid-25 fleft sufix-2">
-						<div class="ti-photo"><img class="ti-img" src=""></img></div>
-						<div class="ti-info">
-							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
-							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
-						</div>
-						<span class="ti-comprar"><i>Comprar</i></span>
-					</div>
-
-					<div class="item-container grid-25 fleft">
-						<div class="ti-photo"><img class="ti-img" src=""></img></div>
-						<div class="ti-info">
-							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
-							<span class="ti-desc">Lorem Ipsum dolor sit amet, onsectetur adipiscing elit.</span>
-						</div>
-						<span class="ti-comprar"><i>Comprar</i></span>
-					</div>
-				</div>
-
-				<div>
-					<div class="item-container grid-25 fleft sufix-2">
-						<div class="ti-photo"><img class="ti-img" src=""></img></div>
-						<div class="ti-info">
-							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
-							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
-						</div>
-						<span class="ti-comprar"><i>Comprar</i></span>
-					</div>
-
-					<div class="item-container grid-25 fleft sufix-2">
-						<div class="ti-photo"><img class="ti-img" src=""></img></div>
-						<div class="ti-info">
-							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
-							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
-						</div>
-						<span class="ti-comprar"><i>Comprar</i></span>
-					</div>
-
-					<div class="item-container grid-25 fleft sufix-2">
-						<div class="ti-photo"><img class="ti-img" src=""></img></div>
-						<div class="ti-info">
-							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
-							<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
-						</div>
-						<span class="ti-comprar"><i>Comprar</i></span>
-					</div>
-
-					<div class="item-container grid-25 fleft">
-						<div class="ti-photo"><img class="ti-img" src=""></img></div>
-						<div class="ti-info">
-							<h2 class="ti-title"><i>Lorem ipsum</i></h2>
-							<span class="ti-desc">Lorem Ipsum dolor sit amet, onsectetur adipiscing elit.</span>
-						</div>
-						<span class="ti-comprar"><i>Comprar</i></span>
-					</div>
-				</div>
-			</div>
-			<div class="flechaIzq flechaIzq-tienda">
-				<img src="{{URL::asset('/img/FLECHA 1 tienda.png')}}">
-			</div>
-			<div class="flechaDer flechaDer-tienda">
-				<img src="{{URL::asset('/img/FLECHA 2 tienda.png')}}">
-			</div>
-		</div>
-	</section>
-</div>
-
-
-<div id="3Polygon"  class="clearfix" style="margin-top: -58px;">
-	<section id="trabajo-section" class="trabajo-section fleft">
-		<header class="section-header">
-			<h1 class="section-title" style="color:#fdbe10;letter-spacing: 2px;"><span class="section-title">Trabajo</span></h1>
-		</header>
-
-		<div class="section-content">
-			<div class="section-span">
-				<h1 class="trabajo-span trabajo-1">¿Quieres unirte</h1>
-				<h1 class="trabajo-span trabajo-2">a nuestro equipo?</h1>
-			</div>
-			<span class="adjunta">Adjunta aqui tu CV o Portafolio</span>
-
-			<div class="cv-form">
-				{!! Form::open(['route' => ['cv'], 'method' => 'POST', 'files' => 'true']) !!}
-				{{ csrf_field() }}
-
-				<div class="fileUpload">
-					{!! Form::text('holder', 'CV/Portafolio', array('disabled'=>'disabled', 'class' => 'uploadSpan', 'id' => 'cvUpload')) !!}
-
-					{!! Form::file('cv', array('class' => 'upload', 'id' => 'cv', 'required')) !!}
-					{!! Form::submit('submit', array('id'=>'cvSubmit', 'style' => 'display:none;')) !!}
-				</div>
-				<span class="msjError"> @if ($errors->first('cv')) *{{ $errors->first('cv') }} @endif</span>
-
-				<div class="success-message">
-					@if(Session::has('cv'))
-					{{ Session::get('cv')}}
-					@endif
-				</div>
-
-				{!! Form::close() !!}
-			</div>
-		</div>
-	</section>
-</div>
-
-<footer class="clearfix" style="margin-top: -85px;">
-	<section id="contact-section" class="contact-section">
-		<!-- 	<div class="diagonal_l_top grey"></div> -->
-		<div class="section-container grid-100">
-			<header class="section-header">
-				<h1 class="section-title">contacto</h1>
-				<div class="section-slogan">
-					<div class="lines fleft"></div>
-					<span> ¿Tienes una idea o proyecto? Escríbenos</span>
-					<div class="lines fright"></div>
-				</div>
-			</header>
-
-			<div class="contact grid-100 clearfix">
-				<div class="info grid-40 fright">
-					<h2 style="letter-spacing: 3px;">¿dónde estamos?</h2>
-					<div class="lines"></div>
+				<div class="tienda-slider grid-100 clearfix">
 					<div>
-						<ul>
-							<li>Caracas - Venezuela</li>
-							<li>Ciudad de Panamá - Panamá</li>
-							<li>Lima - Perú</li>
-						</ul>
-					</div>
-					<div class="lines"></div>
+						<div class="item-container grid-25 fleft sufix-2">
+							<div class="ti-photo"><img class="ti-img" src=""></img></div>
+							<div class="ti-info">
+								<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+								<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<span class="ti-comprar"><i>Comprar</i></span>
+						</div>
 
-					<div class="social-links">
-						<ul class="grid-100">
-							<li><a href="https://www.facebook.com/CriollosFA/" target="_blank"><img src="/img/FB.png"></a></li>
-							<li><a href="https://www.linkedin.com/company/2640001" target="_blank"><img src="/img/IN.png"></a></li>
-							<li><a href="https://twitter.com/CriollosFA?lang=es" target="_blank"><img src="/img/TW.png"></a></li>
-							<li><a href="https://www.instagram.com/criollosfa/" target="_blank"><img src="/img/IG.png"></a></li>
-							<li><a href="https://www.youtube.com" target="_blank"><img src="/img/YOUTUBE.png"></a></li>
-							<!--  -->
-						</ul>
-						<div class="correo">
-							<img src="/img/CORREO.png">info@criollosgroup.com
-							<!--  -->
+						<div class="item-container grid-25 fleft sufix-2">
+							<div class="ti-photo"><img class="ti-img" src=""></img></div>
+							<div class="ti-info">
+								<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+								<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<span class="ti-comprar"><i>Comprar</i></span>
+						</div>
+
+						<div class="item-container grid-25 fleft sufix-2">
+							<div class="ti-photo"><img class="ti-img" src=""></img></div>
+							<div class="ti-info">
+								<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+								<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<span class="ti-comprar"><i>Comprar</i></span>
+						</div>
+
+						<div class="item-container grid-25 fleft">
+							<div class="ti-photo"><img class="ti-img" src=""></img></div>
+							<div class="ti-info">
+								<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+								<span class="ti-desc">Lorem Ipsum dolor sit amet, onsectetur adipiscing elit.</span>
+							</div>
+							<span class="ti-comprar"><i>Comprar</i></span>
+						</div>
+					</div>
+
+					<div>
+						<div class="item-container grid-25 fleft sufix-2">
+							<div class="ti-photo"><img class="ti-img" src=""></img></div>
+							<div class="ti-info">
+								<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+								<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<span class="ti-comprar"><i>Comprar</i></span>
+						</div>
+
+						<div class="item-container grid-25 fleft sufix-2">
+							<div class="ti-photo"><img class="ti-img" src=""></img></div>
+							<div class="ti-info">
+								<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+								<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<span class="ti-comprar"><i>Comprar</i></span>
+						</div>
+
+						<div class="item-container grid-25 fleft sufix-2">
+							<div class="ti-photo"><img class="ti-img" src=""></img></div>
+							<div class="ti-info">
+								<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+								<span class="ti-desc">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<span class="ti-comprar"><i>Comprar</i></span>
+						</div>
+
+						<div class="item-container grid-25 fleft">
+							<div class="ti-photo"><img class="ti-img" src=""></img></div>
+							<div class="ti-info">
+								<h2 class="ti-title"><i>Lorem ipsum</i></h2>
+								<span class="ti-desc">Lorem Ipsum dolor sit amet, onsectetur adipiscing elit.</span>
+							</div>
+							<span class="ti-comprar"><i>Comprar</i></span>
 						</div>
 					</div>
 				</div>
-
-				<div class="grid-60 fleft">
-					<form id="contact-form" class="contact-form" action="{{ url('/contact') }}" method="POST">
-						{{ csrf_field() }}
-						<div class="grid-50 fleft" style="padding-right: 6px;">
-							<input placeholder="Nombre y Apellido" class="form-control" name="name" type="text" required>
-							<span class="msjError"> @if ($errors->first('name')) *{{ $errors->first('name') }} @endif</span>
-						</div>
-						<div class="grid-50 fright" style="padding-left: 6px;">
-							<input placeholder="Correo" class="form-control" name="email" type="email" required>
-							<span class="msjError"> @if ($errors->first('email')) *{{ $errors->first('email') }} @endif</span>
-						</div>
-						<div class="grid-100">
-							<input placeholder="Motivo" class="form-control" name="motivation" type="text" required>
-							<span class="msjError"> @if ($errors->first('motivation')) *{{ $errors->first('motivation') }} @endif</span>
-							<textarea id="message" class="message form-control" name="message" placeholder="Mensaje" required></textarea>
-							<span class="msjError"> @if ($errors->first('message')) *{{ $errors->first('message') }} @endif</span>
-						</div>
-
-						<div class="formSend fright">
-							<span style="letter-spacing: 0px;">enviar</span>
-							<input id="send-btn" class="send-btn" name="send-btn" value="Send" type="submit">
-						</div>
-
-						<div class="success-message">
-							@if(Session::has('mail'))
-							{{ Session::get('mail')}}
-							@endif
-						</div>
-
-					</form>
+				<div class="flechaIzq flechaIzq-tienda">
+					<img src="{{URL::asset('/img/FLECHA 1 tienda.png')}}">
+				</div>
+				<div class="flechaDer flechaDer-tienda">
+					<img src="{{URL::asset('/img/FLECHA 2 tienda.png')}}">
 				</div>
 			</div>
-		</div>
-	</section>
-	<div class="grid-100 copyright">
-		Criollos Full Agency ® Todos los Derechos Reservados 2016
+		</section>
 	</div>
-</footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdn.rawgit.com/andrusieczko/clip-path-polygon/master/build/clip-path-polygon.min.js"></script>
 
-<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-<script type="text/javascript" src="{{URL::asset('/js/slick/slick.min.js')}}"></script>
-<script type="text/javascript" src="{{URL::asset('/js/viewportchecker.js')}}"></script>
-<script type="text/javascript" src="{{URL::asset('/js/conteo.js')}}"></script>
-<script type="text/javascript" src="{{URL::asset('/js/scrollTo.js')}}"></script>
-<script type="text/javascript" src="{{URL::asset('/js/criollos.js')}}"></script>
+	<div id="3Polygon"  class="clearfix" style="margin-top: -58px;">
+		<section id="trabajo-section" class="trabajo-section fleft">
+			<header class="section-header">
+				<h1 class="section-title" style="color:#fdbe10;letter-spacing: 2px;"><span class="section-title">Trabajo</span></h1>
+			</header>
+
+			<div class="section-content">
+				<div class="section-span">
+					<h1 class="trabajo-span trabajo-1">¿Quieres unirte</h1>
+					<h1 class="trabajo-span trabajo-2">a nuestro equipo?</h1>
+				</div>
+				<span class="adjunta">Adjunta aqui tu CV o Portafolio</span>
+
+				<div class="cv-form">
+					{!! Form::open(['route' => ['cv'], 'method' => 'POST', 'files' => 'true']) !!}
+					{{ csrf_field() }}
+
+					<div class="fileUpload">
+						{!! Form::text('holder', 'CV/Portafolio', array('disabled'=>'disabled', 'class' => 'uploadSpan', 'id' => 'cvUpload')) !!}
+
+						{!! Form::file('cv', array('class' => 'upload', 'id' => 'cv', 'required')) !!}
+						{!! Form::submit('submit', array('id'=>'cvSubmit', 'style' => 'display:none;')) !!}
+					</div>
+					<span class="msjError"> @if ($errors->first('cv')) *{{ $errors->first('cv') }} @endif</span>
+
+					<div class="success-message">
+						@if(Session::has('cv'))
+						{{ Session::get('cv')}}
+						@endif
+					</div>
+
+					{!! Form::close() !!}
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="clearfix" style="margin-top: -85px;">
+		<section id="contact-section" class="contact-section">
+			<!-- 	<div class="diagonal_l_top grey"></div> -->
+			<div class="section-container grid-100">
+				<header class="section-header">
+					<h1 class="section-title">contacto</h1>
+					<div class="section-slogan">
+						<div class="lines fleft"></div>
+						<span> ¿Tienes una idea o proyecto? Escríbenos</span>
+						<div class="lines fright"></div>
+					</div>
+				</header>
+
+				<div class="contact grid-100 clearfix">
+					<div class="info grid-40 fright">
+						<h2 style="letter-spacing: 3px;">¿dónde estamos?</h2>
+						<div class="lines"></div>
+						<div>
+							<ul>
+								<li>Caracas - Venezuela</li>
+								<li>Ciudad de Panamá - Panamá</li>
+								<li>Lima - Perú</li>
+							</ul>
+						</div>
+						<div class="lines"></div>
+
+						<div class="social-links">
+							<ul class="grid-100">
+								<li><a href="https://www.facebook.com/CriollosFA/" target="_blank"><img src="/img/FB.png"></a></li>
+								<li><a href="https://www.linkedin.com/company/2640001" target="_blank"><img src="/img/IN.png"></a></li>
+								<li><a href="https://twitter.com/CriollosFA?lang=es" target="_blank"><img src="/img/TW.png"></a></li>
+								<li><a href="https://www.instagram.com/criollosfa/" target="_blank"><img src="/img/IG.png"></a></li>
+								<li><a href="https://www.youtube.com" target="_blank"><img src="/img/YOUTUBE.png"></a></li>
+								<!--  -->
+							</ul>
+							<div class="correo">
+								<img src="/img/CORREO.png">info@criollosgroup.com
+								<!--  -->
+							</div>
+						</div>
+					</div>
+
+					<div class="grid-60 fleft">
+						<form id="contact-form" class="contact-form" action="{{ url('/contact') }}" method="POST">
+							{{ csrf_field() }}
+							<div class="grid-50 fleft" style="padding-right: 6px;">
+								<input placeholder="Nombre y Apellido" class="form-control" name="name" type="text" required>
+								<span class="msjError"> @if ($errors->first('name')) *{{ $errors->first('name') }} @endif</span>
+							</div>
+							<div class="grid-50 fright" style="padding-left: 6px;">
+								<input placeholder="Correo" class="form-control" name="email" type="email" required>
+								<span class="msjError"> @if ($errors->first('email')) *{{ $errors->first('email') }} @endif</span>
+							</div>
+							<div class="grid-100">
+								<input placeholder="Motivo" class="form-control" name="motivation" type="text" required>
+								<span class="msjError"> @if ($errors->first('motivation')) *{{ $errors->first('motivation') }} @endif</span>
+								<textarea id="message" class="message form-control" name="message" placeholder="Mensaje" required></textarea>
+								<span class="msjError"> @if ($errors->first('message')) *{{ $errors->first('message') }} @endif</span>
+							</div>
+
+							<div class="formSend fright">
+								<span style="letter-spacing: 0px;">enviar</span>
+								<input id="send-btn" class="send-btn" name="send-btn" value="Send" type="submit">
+							</div>
+
+							<div class="success-message">
+								@if(Session::has('mail'))
+								{{ Session::get('mail')}}
+								@endif
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="grid-100 copyright">
+			Criollos Full Agency ® Todos los Derechos Reservados 2016
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.rawgit.com/andrusieczko/clip-path-polygon/master/build/clip-path-polygon.min.js"></script>
+
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+	<script type="text/javascript" src="{{URL::asset('/js/slick/slick.min.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('/js/viewportchecker.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('/js/conteo.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('/js/scrollTo.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('/js/criollos.js')}}"></script>
 
 	<script>
 		$(function() {
@@ -730,19 +730,19 @@
 // 				isPercentage: true
 // 			});
 
-			$('#portfolio-section .category-slider .slick-list').clipPath([[0, 7], [200, 0], [100, 100],[0, 95], [0, 0]], {
-				isPercentage: true
-			});
+$('#portfolio-section .category-slider .slick-list').clipPath([[0, 7], [200, 0], [100, 100],[0, 95], [0, 0]], {
+	isPercentage: true
+});
 
-			$('#message').clipPath([[0, 0], [100, 0], [100, 85],[0, 100], [0, 0]], {
-				isPercentage: true
-			});
+$('#message').clipPath([[0, 0], [100, 0], [100, 85],[0, 100], [0, 0]], {
+	isPercentage: true
+});
 
-			$('.services-polin').clipPath([[0, 4.5], [100, 0], [100, 95],[0, 100], [0, 0]], {
-				isPercentage: true
-			});
+$('.services-polin').clipPath([[0, 4.5], [100, 0], [100, 95],[0, 100], [0, 0]], {
+	isPercentage: true
+});
 
-		});
+});
 
 //
 // 		$(function() {
@@ -771,7 +771,11 @@
 // 			});
 //
 // 		});
-	</script>
+
+var object = {!! $clients !!};
+</script>
+}
+}
 
 </body>
 </html>

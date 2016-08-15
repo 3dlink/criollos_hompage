@@ -14,15 +14,20 @@
 
 					<div class="form-group">
 						{!! Form::label('originalImgName', 'Image') !!}
+						<div id="img_destino" class="img-edit">
+							<img src="{{URL::asset('img/').'/'.$image->image}}">
+						</div>
 						{!! Form::text('holder', $image->originalName, array('disabled'=>'disabled', 'class' => 'form-control uploadSpan', 'id' => 'frontUpload')) !!}
 
 						<div class="fileUpload btn btn-info">
 							<span>Browse...</span>
-							{!! Form::file('originalImgName', array('class' => 'upload')) !!}
+							{!! Form::file('originalImgName', array('class' => 'upload', 'id' => 'originalImgName')) !!}
 						</div>
 
 						<span class="msjError"> @if ($errors->first('originalImgName')) *{{ $errors->first('originalImgName') }} @endif</span>
 					</div>
+
+
 				</div>
 
 				<div class="panel-footer">

@@ -92,3 +92,51 @@ label {
 	max-height: 100%;
 	display: inline-block !important;
 }
+
+textarea.wdesc{
+	max-width: 100%;
+	min-width: 100%;
+
+	max-height: 100px;
+	min-height: 100px;
+}
+
+.navbar-default .navbar-nav > li > a{
+	color: white;
+}
+
+.navbar-default{
+	background-color: black;
+	border-color: white;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+	color: white;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover{
+	color: white;
+	background-color: black;
+}
+
+.dropdown-menu{
+	background-color: black;
+}
+
+.dropdown-menu > li > a{
+	color: white;
+}
+
+.logo{
+	height: 100%;
+}
+
+.img-edit{
+	margin: 10px auto;
+}
+
+#img_destino img{
+	height: 25%;
+	width: 25%;
+}

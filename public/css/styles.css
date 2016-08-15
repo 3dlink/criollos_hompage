@@ -44,6 +44,10 @@
 
 /*FONTS*/
 
+:focus{
+	outline: none !important;
+}
+
 *{
 	z-index: 0;
 	box-sizing: border-box;
