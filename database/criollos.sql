@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-07-2016 a las 04:08:28
+-- Tiempo de generación: 16-08-2016 a las 20:39:03
 -- Versión del servidor: 10.1.10-MariaDB
 -- Versión de PHP: 5.6.15
 
@@ -23,159 +23,47 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categories`
+-- Estructura de tabla para la tabla `client_vs`
 --
 
-CREATE TABLE `categories` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `clients`
---
-
-CREATE TABLE `clients` (
+CREATE TABLE `client_vs` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `originalImgName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `hasWork` tinyint(1) NOT NULL,
-  `category_id` int(11) NOT NULL,
+  `originalImgName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `images`
+-- Volcado de datos para la tabla `client_vs`
 --
 
-CREATE TABLE `images` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `originalName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `work_id` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `migrations`
---
-
-CREATE TABLE `migrations` (
-  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `password_resets`
---
-
-CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `quotes`
---
-
-CREATE TABLE `quotes` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `quote` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `users`
---
-
-CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `works`
---
-
-CREATE TABLE `works` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `description` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
-  `client_id` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+INSERT INTO `client_vs` (`id`, `name`, `image`, `originalImgName`, `created_at`, `updated_at`) VALUES
+(2, 'femmex', 'img1471276661GWY.png', 'c1.png', '2016-08-15 19:57:41', '2016-08-15 19:57:41'),
+(3, 'teragrip', 'img14712766772Z2.png', 'c2.png', '2016-08-15 19:57:57', '2016-08-15 19:57:57'),
+(4, 'viajanet', 'img147127669069F.png', 'c3.png', '2016-08-15 19:58:10', '2016-08-15 19:58:10'),
+(5, 'panasonic', 'img1471276704CSD.png', 'c4.png', '2016-08-15 19:58:24', '2016-08-15 19:58:24'),
+(6, '3m', 'img147127672358X.png', 'c5.png', '2016-08-15 19:58:43', '2016-08-15 19:58:43'),
+(7, 'Kimberly-Clark', 'img1471276754MZO.png', 'c6.png', '2016-08-15 19:59:14', '2016-08-15 19:59:14'),
+(8, 'alpura', 'img14712767656Q9.png', 'c7.png', '2016-08-15 19:59:25', '2016-08-15 19:59:25'),
+(9, 'rinaris', 'img14712767775LX.png', 'c8.png', '2016-08-15 19:59:37', '2016-08-15 19:59:37'),
+(10, 'la sante', 'img1471276789ULT.png', 'c9.png', '2016-08-15 19:59:49', '2016-08-15 19:59:49'),
+(11, 'seguros caracas', 'img1471276801W3J.png', 'c10.png', '2016-08-15 20:00:01', '2016-08-15 20:00:01'),
+(12, 'VR', 'img1471276815XWT.png', 'c11.png', '2016-08-15 20:00:15', '2016-08-15 20:00:15'),
+(13, 'fundafarmacia', 'img1471276829WHM.png', 'c12.png', '2016-08-15 20:00:29', '2016-08-15 20:00:29'),
+(14, 'cadena capriles', 'img1471276848XGZ.png', 'c13.png', '2016-08-15 20:00:48', '2016-08-15 20:00:48'),
+(15, 'rhyn dance', 'img1471276859E85.png', 'c14.png', '2016-08-15 20:00:59', '2016-08-15 20:00:59'),
+(16, 'ims', 'img14712768715VR.png', 'c15.png', '2016-08-15 20:01:11', '2016-08-15 20:01:11');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `categories`
+-- Indices de la tabla `client_vs`
 --
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `clients`
---
-ALTER TABLE `clients`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `images`
---
-ALTER TABLE `images`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `password_resets`
---
-ALTER TABLE `password_resets`
-  ADD KEY `password_resets_email_index` (`email`),
-  ADD KEY `password_resets_token_index` (`token`);
-
---
--- Indices de la tabla `quotes`
---
-ALTER TABLE `quotes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
-
---
--- Indices de la tabla `works`
---
-ALTER TABLE `works`
+ALTER TABLE `client_vs`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -183,35 +71,10 @@ ALTER TABLE `works`
 --
 
 --
--- AUTO_INCREMENT de la tabla `categories`
+-- AUTO_INCREMENT de la tabla `client_vs`
 --
-ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT de la tabla `clients`
---
-ALTER TABLE `clients`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT de la tabla `images`
---
-ALTER TABLE `images`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
---
--- AUTO_INCREMENT de la tabla `quotes`
---
-ALTER TABLE `quotes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
---
--- AUTO_INCREMENT de la tabla `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `works`
---
-ALTER TABLE `works`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+ALTER TABLE `client_vs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

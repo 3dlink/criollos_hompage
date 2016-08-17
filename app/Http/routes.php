@@ -48,6 +48,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     	'as'	=>	'admin.password'
     ]);
 
+    Route::post('password', [
+        'uses'  =>  'PasswordChangeController@setPassword',
+        'as'    =>  'admin.setpwd'
+    ]);
+
     Route::resource('clients', 'ClientsController');
 
     Route::get('clients/{id}/index', [
